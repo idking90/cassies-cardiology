@@ -2,82 +2,68 @@
 
 ## Purpose
 
-Cassie's Cardiology is an interactive medical education tool designed to support live teaching sessions with medical students and residents.
+Cassie's Cardiology is an interactive clinical education tool designed to support live teaching sessions with medical students and residents.
 
-The tool provides a structured question-based discussion format that allows an educator to introduce a clinical concept, collect learner responses, and provide additional teaching material.
+The application helps educators guide discussion by presenting clinical questions, collecting anonymous learner responses, and providing optional teaching material.
 
-## Primary Users
+## Primary User
 
-The primary user is the educator (Cassie), who uses the application during in-person teaching sessions.
+The primary user is the educator.
 
-Learners (medical students and residents) interact with the content during the teaching session but do not need individual accounts.
+The educator uses the application during in-person teaching sessions to:
+- Select teaching topics.
+- Present questions.
+- Review learner responses.
+- Decide whether additional teaching is needed.
+- Track completion of curriculum topics.
 
-## Core User Experience
+## Learner Experience
 
-During a teaching session:
+Learners:
+- Do not create accounts.
+- Do not provide identifying information.
+- Access questions through a QR code.
+- Answer questions anonymously.
 
-1. The educator selects the current teaching question.
-2. Learners view the question on the website.
-3. Learners select an answer.
-4. The application provides feedback.
+## Core Workflow
 
-If the answer is correct:
-- The learner receives confirmation.
-- The educator can continue the discussion.
+1. Educator opens the topic dashboard.
+2. Educator selects a topic.
+3. Application displays the topic question and QR code.
+4. Learners scan the QR code and answer.
+5. Educator reviews anonymous response results.
+6. Educator chooses:
+   - Mark topic complete.
+   - Review additional teaching material.
 
-If the answer is incorrect:
-- The application displays additional teaching material.
-- Material may include:
-  - Text explanations
-  - Drawings
-  - Diagrams
-  - Images
-  - References
+## Topic Completion
 
-## Question Management
-
-The educator can:
-- Create questions
-- Edit questions
-- Select which question is currently active
-
-All learners see the same active question.
-
-## Teaching Session Mode
-
-The application is designed primarily for learners using individual devices during live teaching sessions.
-
-A secondary use case is displaying the active question on a shared screen during group discussion.
-
-The application should:
-- Be optimized for mobile devices.
-- Present the same active question to all users.
-- Allow an educator to control which question is active.
-- Avoid requiring learner accounts or personal information.
+Topics remain marked as completed until the educator performs a reset.
 
 ## Privacy Principles
 
-Version 1 will not:
-- Require learner accounts
-- Store learner information
-- Track individual performance
-- Collect personal data from learners
+The application will not:
+- Require learner accounts.
+- Store learner identities.
+- Track individual learner performance.
+- Collect unnecessary personal information.
 
 ## Version 1 Goals
 
-The first version will:
-- Display the currently selected teaching question.
-- Allow learners to answer multiple-choice questions.
-- Provide immediate feedback.
-- Display educational material when appropriate.
-- Provide an easy educator interface for managing questions.
+Version 1 will:
+- Display a list of teaching topics.
+- Track completed topics.
+- Display one question per topic.
+- Generate a QR code for each topic.
+- Collect anonymous answer results.
+- Display aggregate response data to the educator.
+- Provide optional teaching material.
 
-## Out of Scope for Version 1
+## Out of Scope
 
-The first version will not include:
-- Student accounts
-- Performance tracking
-- Leaderboards
-- Personalized learning paths
-- Social features
-- Payment systems
+Version 1 will not include:
+- Student accounts.
+- Individual performance tracking.
+- Complex analytics.
+- Automated grading history.
+- Personalized learning paths.

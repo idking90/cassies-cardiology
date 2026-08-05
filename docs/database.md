@@ -1,30 +1,46 @@
 # Database Design
 
-## Version 1
+## Prototype
 
-No database will initially be used.
-
-Question data will be stored locally for prototyping.
+The prototype will use local mock data.
 
 ## Future Data Model
 
-The application may eventually store:
+## Topic
 
-### Question
+Fields:
+- id
+- name
+- description
+- completed status
+- question reference
+- teaching material reference
 
-- ID
-- Question text
-- Answer choices
-- Correct answer
-- Explanation
-- Teaching material
-- Images
-- References
-- Active status
-- Created date
+## Question
 
-### Teacher
+Fields:
+- id
+- topic id
+- question text
+- answer choices
+- correct answer
 
-- ID
-- Name
-- Authentication information
+## Response
+
+Fields:
+- id
+- question id
+- selected answer
+- timestamp
+
+Responses are anonymous.
+
+## Teaching Material
+
+Fields:
+- id
+- topic id
+- title
+- text content
+- images
+- references
