@@ -2,68 +2,66 @@
 
 ## Overview
 
-Cassie's Cardiology is a lightweight web application hosted on Cloudflare Pages.
+Cassie's Cardiology is a serverless web application hosted on Cloudflare Pages.
 
-The application consists of:
+The application contains:
 
-- A public learner interface.
-- A teacher/admin interface.
-- A question/content management system.
+- Educator interface.
+- Learner question interface.
+- Content management system.
 
-## User Roles
+## Roles
 
-### Learner
+## Educator
 
-Learners:
-- Do not create accounts.
-- Do not provide personal information.
-- View the currently active question.
+The educator can:
+- View topics.
+- Select a topic.
+- View learner responses.
+- Mark topics complete.
+- Access teaching material.
+- Reset progress.
+
+## Learner
+
+Learners can:
+- Scan QR codes.
+- View questions.
 - Submit answers.
-- View feedback and teaching material.
+- Receive educator-controlled feedback.
 
-### Teacher/Admin
-
-The teacher:
-- Authenticates to the admin area.
-- Creates and edits questions.
-- Selects the active question.
-- Manages teaching content.
+Learners do not authenticate.
 
 ## Application Flow
 
+### Educator Flow
+
+1. Open dashboard.
+2. View topic list.
+3. Select topic.
+4. Display question and QR code.
+5. Monitor responses.
+6. Either:
+   - Complete topic.
+   - View teaching material.
+
 ### Learner Flow
 
-1. Learner opens the website.
-2. Application retrieves the active question.
-3. Learner selects an answer.
-4. Application determines whether the answer is correct.
-5. Application displays feedback.
+1. Scan QR code.
+2. Open topic question.
+3. Select answer.
+4. Submit response.
 
-### Teacher Flow
+## Initial Development Strategy
 
-1. Teacher logs in.
-2. Teacher views available questions.
-3. Teacher selects the active question.
-4. All learners see the updated question.
-
-## Initial Technical Approach
-
-Version 1 will prioritize simplicity.
-
-Initial implementation:
+Prototype:
 - React frontend.
-- Local/mock question data.
-- No database initially.
-- No learner accounts.
-- No tracking.
+- Mock local data.
+- No database.
+- No authentication.
+- Local question/content files.
 
-Backend/database functionality will be added after the user experience is validated.
-
-## Future Architecture
-
-Potential future additions:
+Future:
 - Cloudflare D1 database.
 - Cloudflare R2 image storage.
-- Teacher authentication.
-- Question library.
-- Multiple teaching topics.
+- Educator authentication.

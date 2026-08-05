@@ -1,32 +1,33 @@
 # Roadmap
 
-## Version 1 - Prototype
+## Version 1 Prototype
 
 Goals:
-- Validate teaching workflow.
-- Test learner experience.
-- Test teacher workflow.
+Validate educator workflow.
 
 Features:
-- Mobile-friendly question page.
-- Answer selection.
-- Correct/incorrect feedback.
-- Teaching material display.
-- Simple teacher selection interface.
+- Topic dashboard.
+- Completion tracking.
+- Question display.
+- QR code generation.
+- Anonymous learner responses.
+- Educator response summary.
+- Teaching material pages.
 
-## Version 2 - Content Management
+## Version 2
 
 Features:
-- Teacher login.
-- Database storage.
-- Question creation/editing.
+- Educator login.
+- Persistent database storage.
+- Content editing interface.
 - Image uploads.
 
-## Future Versions
+## Future
 
-Potential features:
-- Multiple courses.
+Potential additions:
+- Multiple rotations.
+- Multiple educators.
+- Multiple questions per topic.
 - Question history.
-- Search.
-- Student progress tracking.
 - Analytics.
+- Additional specialties beyond cardiology.
