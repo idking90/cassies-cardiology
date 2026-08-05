@@ -2,7 +2,7 @@
 
 ## Prototype
 
-The prototype will use local mock data.
+The prototype uses local mock topic data and hardcoded aggregate response counts. Topic completion is held in client-side React state for the current browser session and is cleared with Reset Rotation. No learner answer, identity, or completion data is stored.
 
 ## Future Data Model
 

@@ -1,10 +1,10 @@
 #Requirements/workflow as dictated by Cassie
 
--requirement to save progress by Cassie as educator
--home screen has tiles/other list with topics on it, tracks which ones have already been selected
--selecting topic leads to one question related to topic with QR code or similar
--students scan QR code, answer question on own mobile device, provide results to Cassie
--lead on to additional content in subject area
--also needs return home buttons, etc.
--grey/black out topics as they've been addressed
--reset button for end of rotation
+- educator tracks progress during the active browser session
+- home screen contains a compact Cassie's Cardiology indicator, Reset Rotation button, and topic tiles
+- tiles have no action or ready-state badges; completed tiles remain greyed out with a Completed badge
+- selecting a topic opens an educator view with a read-only question, QR code, and simulated response summary
+- students scan the QR code to open a separate learner-only response page and can submit an answer
+- Learn more opens the topic teaching material and marks the topic complete
+- the educator can also mark a topic complete directly or return to the dashboard
+- Reset Rotation clears all completed topic states
