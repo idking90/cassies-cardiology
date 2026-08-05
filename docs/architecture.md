@@ -8,7 +8,7 @@ The application contains:
 
 - Educator interface.
 - Learner question interface.
-- Content management system.
+- Local topic and teaching-content modules.
 
 ## Roles
 
@@ -19,16 +19,17 @@ The educator can:
 - Select a topic.
 - View learner responses.
 - Mark topics complete.
-- Access teaching material.
+- Access teaching material, which also marks a topic complete.
 - Reset progress.
 
 ## Learner
 
 Learners can:
 - Scan QR codes.
-- View questions.
+- Open a separate learner-only question page.
 - Submit answers.
-- Receive educator-controlled feedback.
+
+In Version 1, learner submission calls a local client-side handler only; no response data is transmitted or retained.
 
 Learners do not authenticate.
 
@@ -38,19 +39,19 @@ Learners do not authenticate.
 
 1. Open dashboard.
 2. View topic list.
-3. Select topic.
-4. Display question and QR code.
-5. Monitor responses.
+3. Select topic tile.
+4. Display a read-only question, QR code, and hardcoded response summary.
+5. Monitor simulated aggregate responses.
 6. Either:
-   - Complete topic.
-   - View teaching material.
+   - Mark topic complete and return to the dashboard.
+   - View teaching material, which marks the topic complete.
 
 ### Learner Flow
 
-1. Scan QR code.
-2. Open topic question.
-3. Select answer.
-4. Submit response.
+1. Scan a QR code that links to `/topics/:topicId/respond`.
+2. Open the learner-only topic question.
+3. Select one answer.
+4. Submit it to a local no-op handler.
 
 ## Initial Development Strategy
 
@@ -60,6 +61,8 @@ Prototype:
 - No database.
 - No authentication.
 - Local question/content files.
+- Browser History API for dashboard, educator topic, teaching, and learner routes.
+- Client-side QR generation from the learner response URL.
 
 Future:
 - Cloudflare D1 database.

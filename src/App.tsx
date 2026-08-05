@@ -1,119 +1,60 @@
-import { useState } from 'react'
-import { mockQuestions } from './mockQuestions'
+import { useEffect, useState } from 'react'
+import { AppHeader } from './components/AppHeader'
+import { Dashboard } from './components/Dashboard'
+import { StudentPage } from './components/StudentPage'
+import { TeachingPage } from './components/TeachingPage'
+import { TopicPage } from './components/TopicPage'
+import { getTopic } from './data/topics'
 import './App.css'
 
+type Route =
+  | { page: 'dashboard' }
+  | { page: 'topic'; topicId: string }
+  | { page: 'teaching'; topicId: string }
+  | { page: 'student'; topicId: string }
+
+function getRoute(pathname = window.location.pathname): Route {
+  const parts = pathname.split('/').filter(Boolean)
+  if (parts[0] === 'topics' && parts[1]) {
+    if (parts[2] === 'learn') return { page: 'teaching', topicId: parts[1] }
+    if (parts[2] === 'respond') return { page: 'student', topicId: parts[1] }
+    return { page: 'topic', topicId: parts[1] }
+  }
+  return { page: 'dashboard' }
+}
+
 function App() {
-  const [activeQuestionId, setActiveQuestionId] = useState(mockQuestions[0].id)
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
+  const [route, setRoute] = useState(getRoute)
+  const [completedTopicIds, setCompletedTopicIds] = useState<Set<string>>(() => new Set())
 
-  const activeQuestion = mockQuestions.find(
-    (question) => question.id === activeQuestionId,
-  )!
-  const isAnswered = selectedAnswer !== null
-  const isCorrect = selectedAnswer === activeQuestion.correctAnswer
+  useEffect(() => {
+    const handlePopState = () => setRoute(getRoute())
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
 
-  function selectQuestion(questionId: string) {
-    setActiveQuestionId(questionId)
-    setSelectedAnswer(null)
+  function navigate(path: string) {
+    window.history.pushState({}, '', path)
+    setRoute(getRoute(path))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  return (
-    <main className="app-shell">
-      <header className="site-header">
-        <div>
-          <p className="eyebrow">Live teaching prototype</p>
-          <h1>Cassie's Cardiology</h1>
-        </div>
-        <span className="session-status">Session active</span>
-      </header>
+  function markComplete(topicId: string) {
+    setCompletedTopicIds((current) => new Set([...current, topicId]))
+  }
 
-      <section className="learner-card" aria-labelledby="question-heading">
-        <div className="question-meta">
-          <span>{activeQuestion.topic}</span>
-          <span>Multiple choice</span>
-        </div>
-        <h2 id="question-heading">{activeQuestion.prompt}</h2>
+  function openTeaching(topicId: string) {
+    markComplete(topicId)
+    navigate(`/topics/${topicId}/learn`)
+  }
 
-        <div className="answers" role="radiogroup" aria-label="Answer choices">
-          {activeQuestion.choices.map((choice, index) => {
-            const isSelected = selectedAnswer === index
-            const answerState =
-              isAnswered && index === activeQuestion.correctAnswer
-                ? ' correct'
-                : isSelected
-                  ? ' incorrect'
-                  : ''
+  const topic = route.page === 'dashboard' ? undefined : getTopic(route.topicId)
+  const topicPath = topic ? `/topics/${topic.id}` : '/'
+  const studentUrl = topic ? `${window.location.origin}${topicPath}/respond` : ''
 
-            return (
-              <button
-                className={`answer${answerState}`}
-                disabled={isAnswered}
-                key={choice}
-                onClick={() => setSelectedAnswer(index)}
-                role="radio"
-                aria-checked={isSelected}
-              >
-                <span className="answer-letter">{String.fromCharCode(65 + index)}</span>
-                <span>{choice}</span>
-              </button>
-            )
-          })}
-        </div>
+  if (route.page === 'student' && topic) return <StudentPage topic={topic} />
 
-        {isAnswered && (
-          <section
-            className={`feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}`}
-            aria-live="polite"
-          >
-            <p className="feedback-label">{isCorrect ? 'Correct' : 'Not quite'}</p>
-            <p>{activeQuestion.explanation}</p>
-          </section>
-        )}
-
-        {isAnswered && !isCorrect && (
-          <section className="teaching-card" aria-labelledby="teaching-heading">
-            <p className="eyebrow">Teaching material</p>
-            <h3 id="teaching-heading">Key discussion points</h3>
-            <ul>
-              {activeQuestion.teachingPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-            <p className="reference">Reference: {activeQuestion.reference}</p>
-          </section>
-        )}
-      </section>
-
-      <aside className="teacher-panel" aria-labelledby="teacher-heading">
-        <div className="teacher-panel-heading">
-          <div>
-            <p className="eyebrow">Educator view</p>
-            <h2 id="teacher-heading">Select active question</h2>
-          </div>
-          <span className="mock-badge">Mock data</span>
-        </div>
-        <p className="teacher-intro">
-          Choose the question learners should see. This selection is local to the prototype.
-        </p>
-        <div className="question-list">
-          {mockQuestions.map((question, index) => (
-            <button
-              className={`question-option${question.id === activeQuestionId ? ' active' : ''}`}
-              key={question.id}
-              onClick={() => selectQuestion(question.id)}
-            >
-              <span className="question-number">{index + 1}</span>
-              <span>
-                <strong>{question.topic}</strong>
-                <small>{question.prompt}</small>
-              </span>
-              {question.id === activeQuestionId && <span className="active-label">Active</span>}
-            </button>
-          ))}
-        </div>
-      </aside>
-    </main>
-  )
+  return <div className="app-shell"><AppHeader canReset={completedTopicIds.size > 0} onHome={() => navigate('/')} onReset={() => setCompletedTopicIds(new Set())} />{route.page === 'dashboard' || !topic ? <Dashboard completedTopicIds={completedTopicIds} onSelectTopic={(topicId) => navigate(`/topics/${topicId}`)} /> : route.page === 'teaching' ? <TeachingPage onBack={() => navigate(topicPath)} onDashboard={() => navigate('/')} topic={topic} /> : <TopicPage isComplete={completedTopicIds.has(topic.id)} onBack={() => navigate('/')} onLearnMore={() => openTeaching(topic.id)} onMarkComplete={() => { markComplete(topic.id); navigate('/') }} topic={topic} topicUrl={studentUrl} />}</div>
 }
 
 export default App
