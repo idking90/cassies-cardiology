@@ -1,0 +1,19 @@
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/QuestionPanel.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/ResponseSummary.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/StudentPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/TopicPage.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/data/topics.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'wrangler.jsonc', LF will be replaced by CRLF the next time Git touches it
+ package.json                       |  3 [32m+++[m
+ src/App.css                        |  6 [32m+++[m[31m---[m
+ src/App.tsx                        | 23 [32m+++++++++++++++++++++[m[31m--[m
+ src/components/QuestionPanel.tsx   |  6 [32m++++[m[31m--[m
+ src/components/ResponseSummary.tsx |  9 [32m+++++[m[31m----[m
+ src/components/StudentPage.tsx     |  9 [32m+++++++[m[31m--[m
+ src/components/TopicPage.tsx       |  7 [32m++++[m[31m---[m
+ src/data/topics.ts                 |  8 [32m++++[m[31m----[m
+ wrangler.jsonc                     | 11 [32m++++++++++[m[31m-[m
+ 9 files changed, 61 insertions(+), 21 deletions(-)

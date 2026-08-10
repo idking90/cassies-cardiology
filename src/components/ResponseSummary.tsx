@@ -1,11 +1,12 @@
 import type { Topic } from '../data/topics'
 
 type ResponseSummaryProps = {
+  responseCounts: number[]
   topic: Topic
 }
 
-export function ResponseSummary({ topic }: ResponseSummaryProps) {
-  const totalResponses = topic.responseCounts.reduce((total, count) => total + count, 0)
+export function ResponseSummary({ responseCounts, topic }: ResponseSummaryProps) {
+  const totalResponses = responseCounts.reduce((total, count) => total + count, 0)
 
   return (
     <section className="response-summary" aria-labelledby="response-summary-heading">
@@ -16,11 +17,11 @@ export function ResponseSummary({ topic }: ResponseSummaryProps) {
         </div>
         <span className="response-total">{totalResponses} responses</span>
       </div>
-      <p className="summary-description">Simulated prototype data — no learner information is collected.</p>
+      <p className="summary-description">Anonymous responses from this quiz session. No learner information is collected.</p>
       <div className="response-bars">
         {topic.choices.map((choice, index) => {
-          const count = topic.responseCounts[index]
-          const percentage = Math.round((count / totalResponses) * 100)
+          const count = responseCounts[index]
+          const percentage = totalResponses === 0 ? 0 : Math.round((count / totalResponses) * 100)
 
           return (
             <div className="response-row" key={choice}>
