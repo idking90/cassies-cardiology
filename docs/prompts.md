@@ -25,4 +25,72 @@ Include a Reset Rotation button on the dashboard that clears all completed topic
 Keep the code modular with reusable components.
 Explain your implementation decisions before making large structural changes.
 
-#####
+##### makes back end logic
+Read the existing /docs files and inspect the current prototype before making changes.
+
+I want to build out the quiz interaction workflow using mock/local data only. Do not implement the real database or authentication yet.
+
+Implement two distinct experiences:
+
+Educator
+
+Selecting a topic opens an educator question screen.
+Display the question and answer choices.
+Display a QR code linking to the student-facing route for that topic.
+Display a simulated anonymous response distribution.
+Show the total number of responses.
+Provide a "Reveal Answer" control.
+Before reveal, do not expose the correct answer on the student-facing screen.
+Provide "Mark Topic Complete", "Learn More", and "Back" controls.
+Marking the topic complete returns to the dashboard and marks the topic completed.
+
+Student
+
+The QR code should open a dedicated student-facing route.
+Display the question and answer choices.
+Allow the student to select one answer and submit it.
+After submission, show a neutral confirmation such as "Answer recorded — waiting for discussion."
+Do not reveal whether the answer was correct until the educator chooses "Reveal Answer."
+Once revealed, show the correct answer.
+
+Prototype behavior
+
+Use mock question data.
+Use local/in-memory state for responses.
+It is acceptable for responses to reset on page refresh.
+Do not add authentication.
+Do not add a database.
+Do not modify the content model based on assumptions about Cassie's unfinished Google Docs.
+Keep the implementation modular so the mock response layer can later be replaced by a server/API.
+
+Before making changes, explain the current application structure and the implementation approach you intend to use.
+
+####
+Build back end prompt
+###
+The proposed architecture looks good. Proceed with Cloudflare Pages Functions + D1.
+
+Before implementing, make these two adjustments:
+
+Preserve the requirement that each topic has a permanent QR code. The QR should point to a stable topic-specific student URL, such as /topics/heart-failure/respond, rather than embedding a unique session token. The backend should determine the currently active session for that topic.
+Separate educator/admin API endpoints from student endpoints so authentication can be added later without redesigning the API. Do not implement authentication yet.
+
+Implement the D1 schema and Pages Functions described in your proposal.
+
+Requirements:
+
+Keep the existing React UI and local content model.
+Do not modify the content model based on Cassie's unfinished Google Docs.
+Do not store student identity, IP addresses, device identifiers, or other identifying information.
+Store only the anonymous response necessary to calculate aggregate results.
+A student must never receive the correct answer before the educator reveals it.
+Multiple students must be able to submit answers concurrently.
+The educator results page should poll for updated response counts.
+The existing local mock response implementation should be replaced by the API.
+Keep the API layer modular so it can be changed later without coupling database logic directly to React components.
+
+Use prepared statements for all D1 queries.
+
+Create the D1 migrations and local development configuration needed to run this with Wrangler.
+
+Before making changes, inspect the existing project and then implement the backend incrementally. After implementation, explain exactly how I should run the D1 database locally and test the multi-device workflow.
