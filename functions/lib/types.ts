@@ -9,6 +9,8 @@ export type Env = {
   DB: {
     prepare: (query: string) => D1Statement
   }
+  ACCESS_AUDIENCE?: string
+  ACCESS_TEAM_DOMAIN?: string
 }
 
 export type FunctionContext = {

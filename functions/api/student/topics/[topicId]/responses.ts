@@ -1,6 +1,6 @@
 import { error, json } from '../../../../lib/http'
 import { getQuestionKey } from '../../../../lib/questionKeys'
-import { getActiveSession } from '../../../../lib/quizSessions'
+import { getSingleActiveStudentSession, getStudentSession } from '../../../../lib/quizSessions'
 import type { FunctionContext } from '../../../../lib/types'
 
 type Submission = { choiceIndex?: unknown }
@@ -18,7 +18,11 @@ export async function onRequestPost(context: FunctionContext) {
 
   if (!Number.isInteger(submission.choiceIndex)) return error('A valid response choice is required.', 400)
 
-  const session = await getActiveSession(context.env, topicId)
+  const sessionId = new URL(context.request.url).searchParams.get('session')
+  const session = sessionId
+    ? await getStudentSession(context.env, topicId, sessionId)
+    : await getSingleActiveStudentSession(context.env, topicId)
+  if (!session) return error('A specific quiz session is required.', 409)
   if (!session) return error('This topic is not accepting responses right now.', 409)
   if (session.status !== 'open') return error('This question is no longer accepting responses.', 409)
   if (submission.choiceIndex < 0 || submission.choiceIndex >= session.choiceCount) return error('That response choice is not available.', 400)
