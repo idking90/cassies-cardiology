@@ -130,3 +130,57 @@ Do not commit changes.
 
 After implementation, run the project's typecheck/build and report any errors rather than guessing at fixes.
 
+### clean up back end initial prompts
+I want to clean up and harden the current D1-backed application. The application is currently working locally and, importantly, has been successfully tested on two separate physical devices through the Cloudflare Pages preview deployment.
+
+**Primary goal:** remove the old mock/localStorage implementation and any dead paths left over from the prototype.
+
+**Preserve all current working behavior. Do not redesign the application or change the architecture.**
+
+Before making changes:
+
+1. Inspect the entire current frontend/API interaction.
+2. Inspect all files under `functions/`.
+3. Inspect `wrangler.jsonc` and `migrations/`.
+4. Search the entire repository for references to:
+
+   * `mockResponses`
+   * `localStorage`
+   * mock response/session functions
+   * any other prototype-only quiz state
+5. Identify what is actually still used versus what is dead code.
+
+Then make the minimum changes necessary to:
+
+* Remove the production dependency on `src/data/mockResponses.ts`.
+* Remove obsolete mock quiz state and localStorage logic.
+* Remove dead imports, functions, types, and components created solely for the old mock implementation.
+* Ensure the React frontend uses the existing Pages Functions/D1 API for quiz sessions, responses, summaries, reveal, and reset behavior.
+* Preserve the existing routes and URL structure.
+* Preserve the current educator and student UI and behavior.
+* Preserve anonymous student participation; do not introduce user accounts, names, or student-identifying data.
+* Do not change the D1 schema unless absolutely necessary.
+* Do not change the existing API contract unless absolutely necessary.
+* Do not add authentication yet.
+* Do not modify the future Google Docs/content-import architecture.
+* Do not add new features.
+
+**Important:** Do not blindly delete `mockResponses.ts`. First verify that nothing in the application still depends on it. If it is completely unused after the migration, remove it.
+
+After making the changes:
+
+1. Run the project's existing typecheck/build/lint commands.
+2. Search the repository again for references to the removed mock implementation and localStorage.
+3. Verify that the production frontend is still calling the existing `/api/...` endpoints.
+4. Review your own diff for unnecessary changes or accidental UI/behavior changes.
+5. Do not commit anything.
+
+At the end, give me:
+
+* a concise summary of what you changed;
+* any files deleted;
+* any remaining references to mock/localStorage code and why they remain;
+* the commands you ran and whether they passed;
+* anything I should manually test before I commit.
+
+Do not make changes outside the scope above.

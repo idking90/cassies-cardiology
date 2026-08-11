@@ -9,12 +9,13 @@ export function StudentPage({ topic }: StudentPageProps) {
   const [submittedAnswer, setSubmittedAnswer] = useState<number | null>(null)
   const [status, setStatus] = useState<StudentStatus>({ active: false, revealed: false })
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const sessionId = new URLSearchParams(window.location.search).get('session') ?? undefined
 
   useEffect(() => {
     let cancelled = false
     async function refreshStatus() {
       try {
-        const nextStatus = await getStudentStatus(topic.id)
+        const nextStatus = await getStudentStatus(topic.id, sessionId)
         if (!cancelled) {
           setStatus(nextStatus)
           setErrorMessage(null)
@@ -29,12 +30,12 @@ export function StudentPage({ topic }: StudentPageProps) {
       cancelled = true
       window.clearInterval(intervalId)
     }
-  }, [topic.id])
+  }, [sessionId, topic.id])
 
   async function submitAnswer(choiceIndex: number) {
     setErrorMessage(null)
     try {
-      await submitStudentResponse(topic.id, choiceIndex)
+      await submitStudentResponse(topic.id, sessionId, choiceIndex)
       setSubmittedAnswer(choiceIndex)
     } catch (error) {
       setErrorMessage(error instanceof Error ? error.message : 'Unable to record your answer.')

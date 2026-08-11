@@ -1,46 +1,57 @@
 # Database Design
 
-## Prototype
+## Overview
 
-The prototype uses local mock topic data and hardcoded aggregate response counts. Topic completion is held in client-side React state for the current browser session and is cleared with Reset Rotation. No learner answer, identity, or completion data is stored.
+Cloudflare D1 stores educator identity records, current-rotation progress, quiz
+sessions, and anonymous student responses. Students do not have database
+identity records.
 
-## Future Data Model
+## Educator
 
-## Topic
+The `educators` table is keyed by the validated Cloudflare Access subject (`sub`).
+The application does not trust an educator ID, email address, or name supplied by
+the browser.
 
-Fields:
-- id
-- name
-- description
-- completed status
-- question reference
-- teaching material reference
+## Current rotation progress
 
-## Question
+The `educator_topic_progress` table stores one completion row per educator and
+topic. Its composite primary key is `(educator_id, topic_id)`. Resetting a
+rotation deletes only the authenticated educator's rows. Historical rotations
+are not retained.
 
-Fields:
-- id
-- topic id
-- question text
-- answer choices
-- correct answer
+## Quiz sessions
 
-## Response
+The `quiz_sessions` table represents an educator currently asking a question to
+a group of students. Each session stores:
 
-Fields:
-- id
-- question id
-- selected answer
-- timestamp
+- educator owner
+- topic ID
+- correct answer index
+- choice count
+- open, revealed, or closed status
+- lifecycle timestamps
 
-Responses are anonymous.
+A partial unique index permits at most one open or revealed session per educator
+and topic. Quiz sessions are separate from current-rotation progress.
 
-## Teaching Material
+## Responses
 
-Fields:
-- id
-- topic id
-- title
-- text content
-- images
-- references
+The `quiz_responses` table stores anonymous answer choices against a quiz session.
+It does not store student names, email addresses, accounts, device identifiers, or
+other learner identity data.
+
+Students access a session using an opaque session value in the QR URL. The API
+validates that value against the topic and active session before accepting a
+response.
+
+## Content and teaching material
+
+Question and teaching content currently remains in the frontend topic modules.
+Future Google Docs/content-import work can introduce durable content references
+without changing the educator-progress or anonymous-response model.
+
+## Migrations
+
+- `0001_quiz_sessions.sql` created the original session and response tables.
+- `0002_educators_and_progress.sql` added educator identity, current-rotation
+  progress, educator-owned sessions, and the corresponding ownership indexes.

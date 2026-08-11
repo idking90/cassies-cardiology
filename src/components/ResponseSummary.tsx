@@ -1,11 +1,12 @@
 import type { Topic } from '../data/topics'
 
 type ResponseSummaryProps = {
+  isDemo?: boolean
   responseCounts: number[]
   topic: Topic
 }
 
-export function ResponseSummary({ responseCounts, topic }: ResponseSummaryProps) {
+export function ResponseSummary({ isDemo = false, responseCounts, topic }: ResponseSummaryProps) {
   const totalResponses = responseCounts.reduce((total, count) => total + count, 0)
 
   return (
@@ -15,10 +16,10 @@ export function ResponseSummary({ responseCounts, topic }: ResponseSummaryProps)
           <p className="eyebrow">Educator view</p>
           <h2 id="response-summary-heading">Anonymous responses</h2>
         </div>
-        <span className="response-total">{totalResponses} responses</span>
+        <span className="response-total">{isDemo ? 'Demo mode' : `${totalResponses} responses`}</span>
       </div>
-      <p className="summary-description">Anonymous responses from this quiz session. No learner information is collected.</p>
-      <div className="response-bars">
+      <p className="summary-description">{isDemo ? 'Sign in as an educator to view live responses from a quiz session.' : 'Anonymous responses from this quiz session. No learner information is collected.'}</p>
+      {!isDemo && <div className="response-bars">
         {topic.choices.map((choice, index) => {
           const count = responseCounts[index]
           const percentage = totalResponses === 0 ? 0 : Math.round((count / totalResponses) * 100)
@@ -36,7 +37,7 @@ export function ResponseSummary({ responseCounts, topic }: ResponseSummaryProps)
             </div>
           )
         })}
-      </div>
+      </div>}
     </section>
   )
 }
