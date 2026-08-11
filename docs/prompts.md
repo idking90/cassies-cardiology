@@ -94,3 +94,39 @@ Use prepared statements for all D1 queries.
 Create the D1 migrations and local development configuration needed to run this with Wrangler.
 
 Before making changes, inspect the existing project and then implement the backend incrementally. After implementation, explain exactly how I should run the D1 database locally and test the multi-device workflow.
+
+### switch to copilot to finish d1 integration
+udflare Pages Functions + D1 backend has already been implemented under functions/ with a migration under migrations/. The React frontend is still using src/data/mockResponses.ts.
+
+I need you to migrate the frontend from the mock/localStorage quiz state to the existing serverless API.
+
+Do not redesign the application or change the UI unnececessarily
+
+First inspect:
+
+functions/
+migrations/
+src/App.tsx
+src/components/StudentPage.tsx
+src/components/TopicPage.tsx
+src/components/ResponseSummary.tsx
+src/data/topics.ts
+
+Determine the API contracts implemented by the existing backend and then connect the React frontend to those APIs.
+
+Requirements:
+
+Remove the production dependency on src/data/mockResponses.ts.
+Student responses must be stored in D1 through the existing API.
+Educator response counts must come from D1.
+Educator reveal must use the existing server API.
+Reset must use the existing server-side behavior.
+Preserve the current UI and routing as much as possible.
+Permanent student QR URLs must remain /topics/:topicId/respond.
+Do not introduce authentication yet.
+Do not change the future Learn More/content architecture.
+Do not modify the D1 schema or backend unless there is an actual incompatibility that prevents the frontend from working.
+Do not commit changes.
+
+After implementation, run the project's typecheck/build and report any errors rather than guessing at fixes.
+
