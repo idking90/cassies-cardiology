@@ -25,6 +25,7 @@ export async function getResponseCounts(env: Env, session: QuizSession) {
 export async function getEducatorSummary(env: Env, session: QuizSession) {
   const responseCounts = await getResponseCounts(env, session)
   return {
+    correctAnswerIndex: session.correctAnswerIndex,
     responseCounts,
     revealed: session.status === 'revealed',
     totalResponses: responseCounts.reduce((total, count) => total + count, 0),
