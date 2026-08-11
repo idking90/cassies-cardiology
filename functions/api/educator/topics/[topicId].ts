@@ -1,6 +1,6 @@
 import { error, json } from '../../../lib/http'
 import { getQuestionKey } from '../../../lib/questionKeys'
-import { getActiveSession, getEducatorSummary, type QuizSession } from '../../../lib/quizSessions'
+import { getActiveSession, getEducatorSummary } from '../../../lib/quizSessions'
 import type { FunctionContext } from '../../../lib/types'
 
 export async function onRequestGet(context: FunctionContext) {
