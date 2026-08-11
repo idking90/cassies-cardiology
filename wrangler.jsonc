@@ -7,7 +7,7 @@
     {
       "binding": "DB",
       "database_name": "cassies-cardiology",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "337aacb2-a181-4b4d-b487-a0d997d4ba6e",
       "migrations_dir": "migrations"
     }
   ]
