@@ -110,7 +110,8 @@ function App() {
   }
 
   function signIn() {
-    window.location.assign(`/cdn-cgi/access/login?redirect_url=${encodeURIComponent(window.location.href)}`)
+    const redirectPath = `${window.location.pathname}${window.location.search}`
+    window.location.assign(`/api/auth/login?redirect=${encodeURIComponent(redirectPath)}`)
   }
 
   function signOut() {
