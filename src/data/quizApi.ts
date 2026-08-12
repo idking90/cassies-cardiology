@@ -33,14 +33,34 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     const message = body && typeof body === 'object' && 'error' in body && typeof body.error === 'string'
       ? body.error
       : 'The request could not be completed.'
-    throw new ApiError(message, body === null && response.ok ? 401 : response.status)
+    throw new ApiError(message, response.status || 500)
   }
 
   return body as T
 }
 
-export function getEducatorIdentity() {
-  return request<EducatorIdentity>('/api/educator/me')
+export async function getEducatorIdentity() {
+  const response = await fetch('/api/educator/me', { redirect: 'manual' })
+
+  if (response.status === 302 || response.status === 401 || response.status === 403) {
+    throw new ApiError('Educator authentication is required.', 401)
+  }
+
+  if (!response.ok) {
+    throw new ApiError('Unable to validate educator authentication.', response.status || 500)
+  }
+
+  const contentType = response.headers.get('content-type')
+  if (!contentType?.includes('application/json')) {
+    throw new ApiError('Educator authentication is required.', 401)
+  }
+
+  const body = await response.json().catch(() => null) as EducatorIdentity | null
+  if (!body || typeof body.authenticated !== 'boolean') {
+    throw new ApiError('Educator authentication is required.', 401)
+  }
+
+  return body
 }
 
 export function getEducatorProgress() {

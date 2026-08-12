@@ -26,7 +26,7 @@ function getRoute(pathname = window.location.pathname): Route {
 }
 
 function isAuthError(error: unknown) {
-  return error instanceof ApiError && (error.status === 401 || error.status === 403)
+  return error instanceof ApiError && (error.status === 401 || error.status === 403 || error.status === 302)
 }
 
 function App() {
