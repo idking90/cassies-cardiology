@@ -14,7 +14,6 @@ export async function onRequestGet(context: FunctionContext) {
   const origin = new URL(context.request.url).origin
   const redirectParam = new URL(context.request.url).searchParams.get('redirect') ?? '/'
   const safeRedirect = isSameOriginRedirect(redirectParam, origin) ? redirectParam : '/'
-  const redirectURL = new URL(safeRedirect, origin)
 
   const domain = context.env.ACCESS_TEAM_DOMAIN
   const aud = context.env.ACCESS_AUDIENCE
@@ -22,8 +21,11 @@ export async function onRequestGet(context: FunctionContext) {
     return new Response('Cloudflare Access configuration is missing.', { status: 500 })
   }
 
+  const callbackURL = new URL('/api/educator/login-callback', origin)
+  callbackURL.searchParams.set('return', safeRedirect)
+
   const loginURL = generateLoginURL({
-    redirectURL: redirectURL.toString(),
+    redirectURL: callbackURL.toString(),
     domain,
     aud,
   })
