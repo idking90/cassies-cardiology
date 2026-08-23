@@ -115,7 +115,7 @@ function App() {
   }
 
   function signOut() {
-    window.location.assign('/cdn-cgi/access/logout?returnTo=/')
+    window.location.assign('/cdn-cgi/access/logout')
   }
 
   async function finishTopic(topicId: string) {
