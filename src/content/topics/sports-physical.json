@@ -1,0 +1,59 @@
+{
+  "id": "sports-physical",
+  "name": "Sports Physical",
+  "question": {
+    "sourceQuestionNumber": "48",
+    "stem": "A 12-year-old boy presents to the clinic for a preparticipation sports exam. He is currently asymptomatic. His past history and family history are both unremarkable. His review of systems evaluation is noncontributory.",
+    "prompt": "Which of the following findings on physical examination would be of greatest concern for a potential cardiac complication during his athletic participation?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "A vibratory murmur intensified with exercise"
+    },
+    {
+      "id": "B",
+      "text": "A lower blood pressure in the right arm compared to that obtained in the leg"
+    },
+    {
+      "id": "C",
+      "text": "A resting heart rate of 56 beats per minute"
+    },
+    {
+      "id": "D",
+      "text": "A prominent, laterally displaced point of maximal impulse"
+    },
+    {
+      "id": "E",
+      "text": "Sinus arrhythmia noted on auscultation"
+    }
+  ],
+  "correctOptionId": "D",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "A prominent, laterally displaced point of maximal impulse"
+    },
+    {
+      "type": "paragraph",
+      "text": "Adverse cardiac events with sport participation are increased with conditions that cause either left ventricular outflow obstruction (as in hypertrophic cardiomyopathy), abnormalities of the origins of the coronary arteries, dilated aortic root, or conduction defects, such as long QT syndrome (LQTS). In this case, a laterally displaced point of maximal impulse (PMI) is consistent with cardiomegaly and can be representative of a serious cardiac condition."
+    },
+    {
+      "type": "paragraph",
+      "text": "Sinus arrhythmia, the variation of heart rate with respiratory cycles, is a common and benign condition."
+    },
+    {
+      "type": "paragraph",
+      "text": "Resting bradycardia in an individual without symptoms during exercise is commonly noted in well-conditioned athletes."
+    },
+    {
+      "type": "paragraph",
+      "text": "A vibratory murmur that increases with exercise, fever, and recumbency is consistent with Still murmur. It is a benign finding."
+    },
+    {
+      "type": "paragraph",
+      "text": "A lower blood pressure (BP) in the arm as compared to the leg is a normal finding. In contrast, a higher BP in the arm as compared to the leg is suggestive of a coarctation of the aorta."
+    }
+  ],
+  "testingPoint": "Identify findings on physical exam that would signify contraindications for sports participation."
+}

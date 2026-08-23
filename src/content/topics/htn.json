@@ -1,0 +1,47 @@
+{
+  "id": "htn",
+  "name": "HTN",
+  "question": {
+    "sourceQuestionNumber": "1",
+    "stem": "A 17-year-old girl presents to her pediatrician in follow-up for hypertension. She has had persistent hypertension over the past few months, confirmed with ambulatory blood pressure monitoring. She has no other symptoms. Her mother has a history of hypertension. Today, her blood pressure is 138/88 mm Hg. Other vital signs are within normal limits. Her BMI is 23 kg/m2, and her physical examination is otherwise unremarkable. A comprehensive metabolic panel and urinalysis are normal.",
+    "prompt": "Which test is most appropriate to add to the initial evaluation?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Renal Ultrasound"
+    },
+    {
+      "id": "B",
+      "text": "Echocardiogram"
+    },
+    {
+      "id": "C",
+      "text": "Sleep Study"
+    },
+    {
+      "id": "D",
+      "text": "Thyrotropin"
+    },
+    {
+      "id": "E",
+      "text": "Lipid Profile"
+    }
+  ],
+  "correctOptionId": "E",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Lipid profile"
+    },
+    {
+      "type": "paragraph",
+      "text": "In pediatric patients with persistent hypertension (HTN), initial laboratory evaluation is directed toward determining the etiology of the HTN and identifying other cardiovascular risk factors. The 2017 American Academy of Pediatrics (AAP) Clinical Practice Guideline for Screening and Management of High Blood Pressure in Children and Adolescents recommends obtaining blood urea nitrogen (BUN), creatinine, electrolytes, urinalysis, and lipid profile as part of the initial evaluation for all children and adolescents with HTN. This test helps screen for dyslipidemia, which is a common comorbidity associated with increased cardiovascular disease risk. Although this patient’s metabolic panel and urinalysis are normal, the lipid profile is still necessary as part of the comprehensive evaluation. For children with obesity, also screen for comorbid conditions by testing hemoglobin A1c (for diabetes mellitus) and serum alanine transaminase levels (for fatty liver). According to the AAP 2017 hypertension guideline, renal ultrasound with Doppler study is recommended for children with HTN who are < 6 years of age or who have abnormal kidney function tests or urinalysis findings. This patient has normal laboratory results and is 17 years of age, making a renal ultrasound unnecessary at this stage, though some centers perform this study in all children with HTN. An echocardiogram is typically performed when there is concern for target organ damage or when pharmacologic therapy is being considered (eg, if the BP target is not met within 4-6 months of lifestyle modifications). This patient has a normal physical exam, and because she is at the stage of lifestyle modifications, she does not require antihypertensive medication at this time. Therefore, an echocardiogram is not indicated."
+    },
+    {
+      "type": "paragraph",
+      "text": "Thyrotropin (TSH; formerly thyroid-stimulating hormone) is an optional part of the initial evaluation of HTN based on history and physical examination findings. Hypothyroidism sometimes causes HTN due to an increase in peripheral vascular resistance, while hyperthyroidism causes systolic HTN with widened pulse pressure. However, this patient does not have any other findings suggestive of hypothyroidism (eg, weight gain, exercise intolerance, constipation, fatigue, cold intolerance) or hyperthyroidism (eg, tachycardia, proptosis, enlarged thyroid/goiter). A sleep study is recommended for children or adolescents with HTN who have a history of snoring, daytime sleepiness, or other symptoms suggestive of obstructive sleep apnea (OSA), especially if they have obesity. This patient is asymptomatic and has a normal BMI, so a sleep study is not indicated at this time."
+    }
+  ],
+  "testingPoint": "Know that the initial laboratory evaluation for all pediatric patients with hypertension includes kidney function, electrolytes, urinalysis, and a lipid profile. These tests evaluate for comorbid conditions such as kidney disease"
+}

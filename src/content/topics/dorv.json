@@ -1,0 +1,92 @@
+{
+  "id": "dorv",
+  "name": "DORV",
+  "question": {
+    "stem": "A 6-month-old male infant presents to his pediatrician with a history of worsening fatigue and diaphoresis with feeds and weight loss over the past month. His mother reports he takes progressively longer to finish bottles and often falls asleep before completing a feed. On exam, he is tachypneic with mild subcostal retractions, has a crescendo-decrescendo murmur at the left upper sternal border, and hepatomegaly is noted on abdominal exam. An echocardiogram is obtained and reveals double outlet right ventricle (DORV) with a subaortic ventricular septal defect.",
+    "prompt": "Which of the following additional cardiac lesions is most commonly found in association with this diagnosis?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Pulmonary stenosis"
+    },
+    {
+      "id": "B",
+      "text": "Coarctation of the aorta"
+    },
+    {
+      "id": "C",
+      "text": "Total anomalous pulmonary venous return (TAPVR)"
+    },
+    {
+      "id": "D",
+      "text": "Straddling tricuspid valve"
+    },
+    {
+      "id": "E",
+      "text": "Complete atrioventricular canal defect"
+    }
+  ],
+  "correctOptionId": "A",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Double outlet right ventricle (DORV) is a conotruncal anomaly in which both the aorta and the pulmonary artery arise predominantly (>50%) from the morphologic right ventricle, with a VSD serving as the only outlet for the left ventricle. The clinical presentation, physiology, and management of DORV are highly dependent on two key anatomic variables: the location of the VSD relative to the great vessels, and the presence or absence of pulmonary stenosis (PS)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pulmonary stenosis is the most common associated lesion in DORV, occurring most frequently in the setting of a subaortic VSD — this combination produces Tetralogy of Fallot–type physiology, since the VSD is committed to the aorta and PS creates right ventricular outflow obstruction, favoring right-to-left shunting and cyanosis. This subaortic VSD with PS variant is the single most common anatomic subtype of DORV overall."
+    },
+    {
+      "type": "paragraph",
+      "text": "Other VSD locations carry their own classic associated physiologies:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Subpulmonic VSD (Taussig-Bing anomaly): the VSD is committed to the pulmonary artery, and deoxygenated RV blood preferentially streams into the aorta while oxygenated LV blood streams into the pulmonary artery — producing transposition-like physiology."
+    },
+    {
+      "type": "paragraph",
+      "text": "Doubly committed or non-committed VSD: less common, more variable physiology."
+    }
+  ],
+  "optionRationales": [
+    {
+      "optionId": "B",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Coarctation of the aorta: Can occur with DORV (particularly the Taussig-Bing subtype, due to relative underdevelopment of the aortic arch from reduced antegrade flow), but it is less commonly associated overall than pulmonary stenosis."
+        }
+      ]
+    },
+    {
+      "optionId": "C",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "TAPVR: Not a characteristic or common association with DORV; TAPVR is more classically associated with heterotaxy syndromes."
+        }
+      ]
+    },
+    {
+      "optionId": "D",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Straddling tricuspid valve: Can be seen in complex DORV, particularly with non-committed VSDs, but is far less common than PS as an associated finding."
+        }
+      ]
+    },
+    {
+      "optionId": "E",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Complete AV canal defect: More classically associated with heterotaxy syndrome and Down syndrome; while AV canal defects can rarely coexist with DORV (especially in heterotaxy), this is not the most common co-occurring lesion."
+        }
+      ]
+    }
+  ],
+  "bottomLine": "Pulmonary stenosis is the most frequently associated lesion in DORV, most classically paired with a subaortic VSD to produce Tetralogy of Fallot–type physiology — a high-yield anatomic pairing for boards."
+}

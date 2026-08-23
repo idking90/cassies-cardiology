@@ -1,19 +1,59 @@
 {
   "id": "chest-pain",
-  "name": "Chest pain approach",
-  "description": "Structuring an initial assessment",
-  "question": { "stem": "What would be the most helpful next discussion point in this chest pain case?", "prompt": "Choose one answer." },
+  "name": "Chest Pain",
+  "question": {
+    "sourceQuestionNumber": "9",
+    "stem": "A 17-year-old girl presents to the emergency department for evaluation of chest pain. Two weeks ago she underwent an uncomplicated open surgical repair of an atrial septal defect. The pain started a couple of days ago and has been steadily increasing in severity. It worsens if she takes a deep breath, and it improves somewhat if she leans forward. On cardiac auscultation, a friction rub is audible.",
+    "prompt": "Which of the following mediators plays the most prominent role in the pathogenesis of this patient’s condition?"
+  },
   "options": [
-    { "id": "A", "text": "Symptom timeline" },
-    { "id": "B", "text": "Risk factors" },
-    { "id": "C", "text": "Initial testing" },
-    { "id": "D", "text": "Disposition planning" }
+    {
+      "id": "A",
+      "text": "Immunoglobulin A"
+    },
+    {
+      "id": "B",
+      "text": "Interleukin-1"
+    },
+    {
+      "id": "C",
+      "text": "Troponin"
+    },
+    {
+      "id": "D",
+      "text": "Brain-type natriuretic peptide"
+    },
+    {
+      "id": "E",
+      "text": "Heat-shock proteins"
+    }
   ],
-  "correctOptionId": "A",
+  "correctOptionId": "B",
   "explanation": [
-    { "type": "paragraph", "text": "A facilitator guide for a structured discussion of an initial chest pain presentation." },
-    { "type": "bullets", "items": ["Begin with the highest-priority clinical concerns.", "Ask learners what additional context would change their thinking.", "Close by reviewing a simple, repeatable framework."] },
-    { "type": "paragraph", "text": "Use a brief think-pair-share before opening the discussion to the group." }
+    {
+      "type": "paragraph",
+      "text": "Interleukin-1"
+    },
+    {
+      "type": "paragraph",
+      "text": "This patient’s chest pain and friction rub 1-2 weeks after a surgical procedure that involved opening the pericardium are consistent with postpericardiotomy syndrome. This is one of 3 different postcardiac injury syndromes, all of which result from injury to the pericardium. The other 2 forms are postmyocardial infarction (ie, Dressler syndrome) and post-traumatic pericarditis. In all cases, the initial injury triggers an immune-mediated process. Available evidence suggests a key role for the NLRP3 inflammasome, which increases production of the cytokine interleukin-1 (IL-1). IL-1α serves as an early alarmin, while IL-1β enhances and perpetuates the immune response. Both cytokines act through the IL-1 receptor to propagate pericardial inflammation. The key role of IL-1 has led to successful therapeutic targeting with IL-1 inhibitors such as rilonacept, which is FDA-approved for the treatment of recurrent pericarditis and reduction in risk of recurrence in patients ≥ 12 years of age."
+    },
+    {
+      "type": "paragraph",
+      "text": "Although autoantibodies appear to play a lesser role in the pathogenesis of postcardiac injury syndromes, immunoglobulin A is not a key mediator. This condition is primarily autoinflammatory rather than autoimmune."
+    },
+    {
+      "type": "paragraph",
+      "text": "Heat-shock proteins are not mediators involved in postcardiac injury syndromes. These proteins can both promote and regulate autoimmune responses and play an important role in other conditions, such as neurodegenerative diseases, autoimmune diseases, cardiovascular diseases, and cancer."
+    },
+    {
+      "type": "paragraph",
+      "text": "Brain-type natriuretic peptide is a cardiac biomarker for heart failure. It is not an inflammatory mediator and has no role in the pathogenesis of postcardiac injury syndromes."
+    },
+    {
+      "type": "paragraph",
+      "text": "Troponin is a marker of myocardial injury. It is not a mediator of inflammation and is not involved in the pathogenesis of postcardiac injury syndromes."
+    }
   ],
-  "references": [{ "title": "Local teaching resource", "citation": "Local teaching resource" }]
+  "testingPoint": "Recall that interleukin-1 (IL-1) is a key inflammatory mediator in the pathogenesis of postcardiac injury syndromes, which include postpericardiotomy syndrome. The key role of IL-1 has led to successful therapeutic targeting with IL-1 inhibitors such as rilonacept."
 }

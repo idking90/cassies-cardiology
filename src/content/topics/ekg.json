@@ -1,0 +1,67 @@
+{
+  "id": "ekg",
+  "name": "EKG",
+  "question": {
+    "sourceQuestionNumber": "22",
+    "stem": "A child has an electrocardiogram (ECG) done. Result shows an Rs pattern over the right precordium.",
+    "prompt": "For which of the following is this Rs pattern normal?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "This is never normal."
+    },
+    {
+      "id": "B",
+      "text": "This is always normal."
+    },
+    {
+      "id": "C",
+      "text": "An ECG in both a 12-year-old child and a 2-month-old infant"
+    },
+    {
+      "id": "D",
+      "text": "An ECG in a 2-month-old infant"
+    },
+    {
+      "id": "E",
+      "text": "An ECG in a 12-year-old child"
+    }
+  ],
+  "correctOptionId": "D",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "An ECG in a 2-month-old infant"
+    },
+    {
+      "type": "paragraph",
+      "text": "An Rs pattern over the right precordium of an infant is a reflection of the normal right ventricular predominance for that age. The Rs pattern is a normal finding in 7% of children younger than 5 years of age. For the QRS to be considered normal the duration of QRS should not exceed more than 10 ms longer than normal for that age group. The R wave in V1 should also not exceed 15 mm in infants < 1 year or 10 mm if > 1 year."
+    },
+    {
+      "type": "paragraph",
+      "text": "The Figure below shows a normal ECG in a young infant. Note the right axis deviation (negative QRS in lead I) and the normal Rs pattern in the right precordium (V1). These findings reflect the normal RV dominance in the newborn and young infant."
+    },
+    {
+      "type": "media",
+      "media": {
+        "type": "ecg",
+        "src": "/media/topics/ekg/ekg-ecg-01.jpg",
+        "alt": "12-lead ECG tracing from a young infant on red grid paper."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Right ventricular hypertrophy (RVH) is suggested by large ventricular forces in the right precordium, V1 and V2, with R waves > 98th percentile for age. An RSR′ pattern also may indicate RVH. Also, RVH may be diagnosed just by an upright T wave in the right precordium after the 1st week of life."
+    },
+    {
+      "type": "paragraph",
+      "text": "For a 12-year-old, the left ventricle should be dominant; therefore, the ECG does not show an Rs pattern. An rSR pattern may still be seen in normal 12-year-old children, but the dominant electrical forces are away from V1."
+    },
+    {
+      "type": "paragraph",
+      "text": "Even though Rs pattern is normal in a 2-month-old infant, the other answer choices are incorrect."
+    }
+  ],
+  "testingPoint": "Know the normal Rs patterns on electrocardiogram (ECG) at different ages."
+}

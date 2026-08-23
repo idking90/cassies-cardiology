@@ -1,0 +1,59 @@
+{
+  "id": "transitional",
+  "name": "Transitional",
+  "question": {
+    "sourceQuestionNumber": "6",
+    "stem": "A 3-week-old girl is admitted to the hospital with a fever, poor feeding, and diarrhea. She was born at 39 weeks of gestation without complications. She has an elevated white blood cell count with cultures pending and is being treated with IV fluids and antibiotics. During the initial assessment, she was noted to be very tachycardic, and the resident physician ordered an ECG as a precaution. The ECG shows a regular rhythm, normal PR interval and QRS duration for age, and upright T waves in leads V1 and V3R.",
+    "prompt": "Which of the following is the most likely significance of these ECG findings?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Hypothyroidism"
+    },
+    {
+      "id": "B",
+      "text": "Hypokalemia"
+    },
+    {
+      "id": "C",
+      "text": "Myocarditis"
+    },
+    {
+      "id": "D",
+      "text": "Normal newborn physiology"
+    },
+    {
+      "id": "E",
+      "text": "Right ventricular hypertrophy"
+    }
+  ],
+  "correctOptionId": "E",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Right ventricular hypertrophy"
+    },
+    {
+      "type": "paragraph",
+      "text": "In a 3-week-old infant, the presence of upright T waves in the right precordial leads V1 and V3R is not a normal finding and should raise concern for right ventricular hypertrophy (RVH). At birth, T waves in these leads may be upright, low, or slightly inverted, but they typically invert during the first week of life as pulmonary vascular resistance falls and left ventricular dominance increases. T waves typically remain inverted until 12-16 years of age, becoming progressively upright in the sequence V3 → V2 → V1. Pulmonary vascular resistance remains elevated after birth in several conditions, such as pulmonary hypertension and various forms of congenital heart disease. This results in RVH and persistently upright T waves in V1 and V3R."
+    },
+    {
+      "type": "paragraph",
+      "text": "In an infant with normal newborn physiology, the T waves should be inverted by the end of the first week of life. This patient has upright T waves at 3 weeks of age, which is abnormal."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hypokalemia is a consideration in this patient due to dehydration and diarrhea. However, this electrolyte disturbance typically causes flattened T waves, U waves, and sometimes ST depression."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hypothyroidism includes flattening or inversion of T waves rather than upright T waves and is more likely to cause bradycardia than the tachycardia present in this patient."
+    },
+    {
+      "type": "paragraph",
+      "text": "Myocarditis typically causes diffuse T-wave inversions, ST-segment abnormalities, and various arrhythmias on ECG. Upright T waves in the right precordial leads are not expected in this condition."
+    }
+  ],
+  "testingPoint": "Recognize that upright T waves in the right precordial leads V1 and V3R after the first week of life are abnormal and suggest right ventricular hypertrophy (RVH). T waves normally invert during the first week of life and do not become upright until adolescence."
+}

@@ -1,19 +1,59 @@
 {
   "id": "heart-failure",
-  "name": "Heart failure foundations",
-  "description": "Recognizing a heart failure presentation",
-  "question": { "stem": "Which element of this presentation would you explore next with the group?", "prompt": "Choose one answer." },
+  "name": "Heart Failure",
+  "question": {
+    "sourceQuestionNumber": "66",
+    "stem": "A 17-year-old patient is hospitalized with new-onset heart failure. He presents with hepatomegaly, bilateral pitting edema of lower extremities, and shortness of breath. He has a negative prior medical history except for a viral URI 10 days ago. Physical exam, CXR, and ECG findings are nonspecific. Endocardial biopsy is performed, which shows inflammatory infiltrates.",
+    "prompt": "What is the most likely underlying cause of this patient’s heart failure?"
+  },
   "options": [
-    { "id": "A", "text": "Symptoms" },
-    { "id": "B", "text": "Volume status" },
-    { "id": "C", "text": "Medication history" },
-    { "id": "D", "text": "Follow-up plan" }
+    {
+      "id": "A",
+      "text": "Pericarditis"
+    },
+    {
+      "id": "B",
+      "text": "Myocarditis"
+    },
+    {
+      "id": "C",
+      "text": "Coronary artery aneurysm"
+    },
+    {
+      "id": "D",
+      "text": "Hypertrophic cardiomyopathy"
+    },
+    {
+      "id": "E",
+      "text": "Myocardial infarction"
+    }
   ],
-  "correctOptionId": "A",
+  "correctOptionId": "B",
   "explanation": [
-    { "type": "paragraph", "text": "A facilitator guide for discussing a heart failure presentation." },
-    { "type": "bullets", "items": ["Distinguish symptoms, signs, and supporting data.", "Discuss how volume status informs the next step.", "Ask learners to name a safe follow-up question."] },
-    { "type": "paragraph", "text": "Finish by asking learners to apply the framework to a new case." }
+    {
+      "type": "paragraph",
+      "text": "Myocarditis"
+    },
+    {
+      "type": "paragraph",
+      "text": "Myocarditis refers to inflammation of the myocardium and is often a clinical diagnosis. Infectious etiologies (particularly viral) are most common in children; therefore, patients often have a history of a recent URI (or sometimes GI) illness within the previous 2 weeks. Myocarditis commonly presents with symptoms of heart failure, including dyspnea, tachycardia, tachypnea, chest pain, hepatomegaly, and rales. Clinical evaluation includes ECG, CXR, echocardiogram, serum BNP, and troponins. In cases where diagnosis is unclear after initial evaluation, cardiac MRI may be used to assist with the diagnosis. MRI may show scarring, inflammation, or edema. Endomyocardial biopsy is usually not necessary, but if performed, shows inflammatory (typically mononuclear) infiltrates."
+    },
+    {
+      "type": "paragraph",
+      "text": "Patients with hypertrophic cardiomyopathy are often asymptomatic. When symptomatic, patients may have dyspnea on exertion, chest pain, dizziness, syncope with exercise, and palpitations. Patients will typically have a cardiac murmur. CXR may show cardiac enlargement and ECG may be abnormal. Echocardiography will show left ventricular hypertrophy without other cause."
+    },
+    {
+      "type": "paragraph",
+      "text": "Coronary artery aneurysm is associated with Kawasaki disease and is also diagnosed by echocardiography. Coronary artery aneurysm can develop into thrombosis and stenosis and lead to ischemia if untreated."
+    },
+    {
+      "type": "paragraph",
+      "text": "Myocardial infarction is rare in children but will present with severe, substernal pressure/pain that can radiate to the neck and arms. Signs of ischemia on ECG include ST-segment elevation and T wave changes in the area of the affected myocardium and reciprocal ST-segment depression in the corresponding “opposite” leads."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pericarditis presents with chest pain and usually fever. Chest pain worsens with cough or inspiration, is worse when supine, and is relieved by sitting up or leaning forward. A “friction rub” on exam is pathognomonic for pericarditis. It will present with diffuse ST elevations on ECG."
+    }
   ],
-  "references": [{ "title": "Local teaching resource", "citation": "Local teaching resource" }]
+  "testingPoint": "Recognize clinical findings associated with heart failure and recall the etiologies."
 }

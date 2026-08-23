@@ -1,0 +1,67 @@
+{
+  "id": "murmurs",
+  "name": "Murmurs",
+  "question": {
+    "sourceQuestionNumber": "12",
+    "stem": "During a scheduled health maintenance visit, a 4-year-old boy is noted to have a heart murmur. The child’s blood pressure is 80/55 mm Hg, and his heart rate is 76 bpm and regular. You recognize the murmur as benign and not indicative of a structural cardiac defect.",
+    "prompt": "Which of the following best describes this type of heart murmur?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "A midsystolic click associated with a late systolic murmur"
+    },
+    {
+      "id": "B",
+      "text": "A Grade 2/6 continuous murmur, heard throughout systole and diastole, that is heard best in the 1st and 2nd right intercostal spaces and varies in intensity just by changes in the position of the neck"
+    },
+    {
+      "id": "C",
+      "text": "A Grade 2⁠–⁠3⁠/⁠6 harsh continuous murmur heard best in the 1st and 2nd left intercostal spaces in the left midclavicular line"
+    },
+    {
+      "id": "D",
+      "text": "A Grade 2⁠–⁠3⁠/⁠6 harsh, crescendo-decrescendo systolic murmur that is loudest at the left lower sternal border and increases in intensity with standing or the Valsalva maneuver"
+    },
+    {
+      "id": "E",
+      "text": "A high-pitched harsh Grade 2⁠–⁠3⁠/⁠6 holosystolic murmur well localized along the lower left sternal border"
+    }
+  ],
+  "correctOptionId": "B",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "A Grade 2/6 continuous murmur, heard throughout systole and diastole, that is heard best in the 1st and 2nd right intercostal spaces and varies in intensity just by changes in the position of the neck"
+    },
+    {
+      "type": "paragraph",
+      "text": "A continuous murmur throughout both systole and diastole that is heard best in the 1st and 2nd right intercostal spaces and varies in intensity by changes in the position of the neck describes a venous hum, a benign and relatively common finding caused by turbulent blood flow throughout the jugular venous system."
+    },
+    {
+      "type": "paragraph",
+      "text": "Blood return from the brain to the heart primarily occurs via the jugular veins at high velocity, inducing vibrations in the walls of the veins and creating a “hum.” The murmur is soft rather than harsh, is continuous throughout both systole and diastole, and is often louder in diastole. Intensity decreases with turning of the head to the side. The murmur may totally disappear in the supine position or with gentle compression of the jugular vein."
+    },
+    {
+      "type": "paragraph",
+      "text": "A venous hum is sometimes difficult to distinguish from a patent ductus arteriosus (PDA), which is also characterized by a continuous murmur. However, a PDA produces a generally louder and harsher murmur—sometimes described as “rumbling” or “machinery-like”—when compared to a venous hum. A PDA murmur is localized to the left 1st and 2nd left intercostal spaces and may radiate along the left sternal border, but it does not vary with position of the head and neck, or compression of the jugular vein. Unlike a venous hum, a PDA is often associated with bounding pulses."
+    },
+    {
+      "type": "paragraph",
+      "text": "A Grade 2⁠–⁠3⁠/⁠6 harsh continuous murmur heard best in the 1st and 2nd left intercostal spaces in the left midclavicular line is consistent with a PDA."
+    },
+    {
+      "type": "paragraph",
+      "text": "A midsystolic click associated with a late systolic murmur is consistent with mitral valve prolapse (MVP). If you have the patient sit or stand (decrease left ventricular volume), the murmur gets longer and the clicks move earlier in systole (i.e., the click murmur moves earlier); and, when the patient squats or lies down, the murmur becomes less noticeable, shorter, and later in systole (i.e., the click murmur moves later)."
+    },
+    {
+      "type": "paragraph",
+      "text": "A high-pitched harsh Grade 2⁠–⁠3⁠/⁠6 holosystolic murmur that is well localized along the lower left sternal border is consistent with a ventricular septal defect (VSD)."
+    },
+    {
+      "type": "paragraph",
+      "text": "A Grade 2⁠–⁠3⁠/⁠6 harsh, crescendo-decrescendo systolic murmur that is loudest at the left lower sternal border and apical regions, radiates to the left mid sternal border and right upper sternal border, and increases in intensity with standing or the Valsalva maneuver is consistent with left ventricular outflow tract (LVOT) obstruction from hypertrophic cardiomyopathy (HCM)."
+    }
+  ],
+  "testingPoint": "Recall characteristic clinical and auscultatory findings that help to distinguish benign heart murmurs from those due to structural cardiac lesions."
+}
