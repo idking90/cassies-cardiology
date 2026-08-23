@@ -114,8 +114,15 @@ function App() {
     window.location.assign(`/api/auth/login?redirect=${encodeURIComponent(redirectPath)}`)
   }
 
-  function signOut() {
-    window.location.assign('/cdn-cgi/access/logout')
+  async function signOut() {
+    try {
+      await fetch('/cdn-cgi/access/logout', {
+        credentials: 'same-origin',
+        redirect: 'manual',
+      })
+    } finally {
+      window.location.assign('/')
+    }
   }
 
   async function finishTopic(topicId: string) {
