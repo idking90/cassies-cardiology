@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 .vite/
 
 .wrangler/
+
+# docx files from initial import
+import-source/
