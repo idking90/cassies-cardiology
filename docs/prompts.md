@@ -1,4 +1,8 @@
-## prompt to create prototype
+# Historical implementation prompts
+
+> This file is a development-history archive, not current product documentation. Its prototype instructions about placeholder content, mock state, missing authentication, and future backend work have been superseded. Use `README.md`, `docs/architecture.md`, `docs/database.md`, `docs/vision.md`, and `docs/roadmap.md` for the current V0 state.
+
+## Prompt to create prototype
 
 Read every file in the /docs directory before making changes.
 

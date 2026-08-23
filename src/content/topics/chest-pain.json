@@ -2,7 +2,6 @@
   "id": "chest-pain",
   "name": "Chest Pain",
   "question": {
-    "sourceQuestionNumber": "9",
     "stem": "A 17-year-old girl presents to the emergency department for evaluation of chest pain. Two weeks ago she underwent an uncomplicated open surgical repair of an atrial septal defect. The pain started a couple of days ago and has been steadily increasing in severity. It worsens if she takes a deep breath, and it improves somewhat if she leans forward. On cardiac auscultation, a friction rub is audible.",
     "prompt": "Which of the following mediators plays the most prominent role in the pathogenesis of this patient’s condition?"
   },

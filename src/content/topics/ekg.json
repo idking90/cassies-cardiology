@@ -2,7 +2,6 @@
   "id": "ekg",
   "name": "EKG",
   "question": {
-    "sourceQuestionNumber": "22",
     "stem": "A child has an electrocardiogram (ECG) done. Result shows an Rs pattern over the right precordium.",
     "prompt": "For which of the following is this Rs pattern normal?"
   },

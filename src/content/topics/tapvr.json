@@ -2,7 +2,6 @@
   "id": "tapvr",
   "name": "TAPVR",
   "question": {
-    "sourceQuestionNumber": "5",
     "stem": "A 12-hour-old, full-term boy is brought to the NICU with profound cyanosis and respiratory distress. Vital signs show HR 155 bpm, BP 50/30 mm Hg, RR 70 breaths/min, and oxygen saturation 55% despite administration of 100% oxygen. On physical examination, there is a prominent second heart sound. No distinct murmur is appreciated due to rapid heart and respiratory rates. The extremities are cool, peripheral pulses are weak, and the liver edge is palpable 4 cm below the costal margin. CXR reveals diffuse normal heart size and interstitial edema.",
     "prompt": "Which of the following is the most likely diagnosis?"
   },

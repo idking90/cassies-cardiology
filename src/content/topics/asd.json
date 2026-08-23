@@ -2,7 +2,6 @@
   "id": "asd",
   "name": "ASD",
   "question": {
-    "sourceQuestionNumber": "19",
     "stem": "A 17-year-old girl presents to clinic with a history of decreased exercise tolerance over the past several months. She is especially concerned because she has always been an outstanding athlete. She has no known history of any chronic medical problems and takes no daily medications. On physical examination, there is a soft systolic ejection murmur over the upper left sternal border, without an ejection click. S1 is normal, and S2 is widely split and does not vary with the respiratory cycle.",
     "prompt": "Which of the following is the most likely finding on ECG?"
   },

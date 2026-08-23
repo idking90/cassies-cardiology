@@ -2,7 +2,6 @@
   "id": "heart-failure",
   "name": "Heart Failure",
   "question": {
-    "sourceQuestionNumber": "66",
     "stem": "A 17-year-old patient is hospitalized with new-onset heart failure. He presents with hepatomegaly, bilateral pitting edema of lower extremities, and shortness of breath. He has a negative prior medical history except for a viral URI 10 days ago. Physical exam, CXR, and ECG findings are nonspecific. Endocardial biopsy is performed, which shows inflammatory infiltrates.",
     "prompt": "What is the most likely underlying cause of this patient’s heart failure?"
   },

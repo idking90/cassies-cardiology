@@ -2,7 +2,6 @@
   "id": "free-space-genetics",
   "name": "Genetics",
   "question": {
-    "sourceQuestionNumber": "53",
     "stem": "You are the pediatrician of a 7-year-old girl who has recently been diagnosed with upward displacement of the lens of her left eye (ectopia lentis) by a pediatric ophthalmologist and with having a mutation of the FBN1 gene by a geneticist. You have examined this girl numerous times in the past, but for the first time today you notice a systolic click, followed by a systolic murmur while examining the heart. The murmur becomes more prominent and noticeably longer in the standing position.",
     "prompt": "What is the most likely cause of the “click murmur” in this patient?"
   },

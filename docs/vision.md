@@ -2,70 +2,42 @@
 
 ## Purpose
 
-Cassie's Cardiology is an interactive clinical education tool designed to support live teaching sessions with medical students and residents.
+Cassie's Cardiology is an interactive clinical-education tool for live teaching with medical students and residents. It helps educators present clinical questions, collect anonymous responses, guide discussion, reveal answers at the appropriate time, and track curriculum progress for the current rotation.
 
-The application helps educators guide discussion by presenting clinical questions, collecting anonymous learner responses, and providing optional teaching material.
+## Current V0 experience
 
-## Primary User
+The production application is available at [https://cassiescardiology.com](https://cassiescardiology.com).
 
-The primary user is the educator.
+Educators authenticate with Google through Cloudflare Access. Each educator has independent, persistent current-rotation progress. V0 does not retain historical rotations.
 
-The educator uses the application during in-person teaching sessions to:
-- Select teaching topics.
-- Present questions.
-- Review learner responses.
-- Decide whether additional teaching is needed.
-- Track completion of curriculum topics.
+Students:
 
-## Learner Experience
-
-Learners:
 - Do not create accounts.
 - Do not provide identifying information.
-- Access questions through a QR code.
-- Answer questions anonymously.
+- Join through a session QR code.
+- Submit answers anonymously.
+- Do not see correctness until the educator reveals it.
 
-## Core Workflow
+## Teaching workflow
 
-1. Educator opens the topic dashboard.
-2. Educator opens a topic from a tile.
-3. The educator view displays a read-only question, QR code, and simulated response summary.
-4. Learners scan the QR code to open a separate, learner-only response page.
-5. Learners select an answer and submit it anonymously.
-6. Educator reviews the simulated anonymous response results.
-7. Educator chooses:
-   - Mark topic complete.
-   - Review additional teaching material.
+1. The educator opens the 25-topic dashboard.
+2. The educator selects a topic and starts or resumes its live session.
+3. Students follow the QR link and submit anonymous answers.
+4. The educator reviews aggregate response counts and leads discussion.
+5. The educator reveals the correct answer when appropriate.
+6. The educator reviews structured teaching content or marks the topic complete.
+7. Progress remains available for that educator until the current rotation is reset.
 
-## Topic Completion
+## Curriculum principles
 
-Topics become completed when the educator selects either **Mark topic complete** or **Learn more**. Completed tiles are greyed out and retain a Completed badge until the educator performs a reset. In Version 1, this state lasts for the active browser session only.
+The curriculum uses structured JSON rather than presentation-specific prose fields. Each topic has one question, stable answer-option IDs, an ordered explanation made from `ContentBlock` values, and optional rationales, Testing Point, Bottom Line, references, and media attribution.
 
-## Privacy Principles
+Question media and explanation media serve different teaching moments and preserve distinct positions. Imported source wording is preserved; ambiguous or inconsistent material must be flagged for human review rather than silently corrected.
 
-The application will not:
-- Require learner accounts.
-- Store learner identities.
-- Track individual learner performance.
-- Collect unnecessary personal information.
+## Privacy principles
 
-## Version 1 Goals
+The application does not require learner accounts, store learner identities, track individual learner performance, or expose the correct answer before educator reveal.
 
-Version 1 will:
-- Display a list of teaching topics.
-- Track completed topics.
-- Display one question per topic.
-- Generate a QR code for each topic.
-- Provide a learner-only URL for every topic QR code.
-- Accept a local, non-persistent learner submission.
-- Display hardcoded aggregate response data to the educator.
-- Provide optional teaching material.
+## Product direction
 
-## Out of Scope
-
-Version 1 will not include:
-- Student accounts.
-- Individual performance tracking.
-- Complex analytics.
-- Automated grading history.
-- Personalized learning paths.
+V0 prioritizes dependable live teaching and progress tracking over engagement mechanics. Gamification, bingo mechanics, historical rotations, and richer analytics may be explored later, with explicit product and privacy decisions before implementation.

@@ -2,7 +2,6 @@
   "id": "cyanotic-heart",
   "name": "Cyanotic Heart",
   "question": {
-    "sourceQuestionNumber": "60",
     "stem": "A 5-day-old girl presents to the emergency department for evaluation of persistent cyanosis, which does not worsen during crying or feeding. She was seen by her pediatrician earlier today for a checkup, where mild cyanosis was noted and her oxygen saturation was 86%. Vital signs show T 36.9 °C (98.4 °F), HR 150 bpm, BP 80/45 mm Hg, RR 72 breaths/min, and oxygen saturation 85%, with no improvement after administration of supplemental oxygen. On physical examination, there are no retractions, grunting, or nasal flaring. Cardiac auscultation reveals a single loud S2 and no murmur. An ECG is normal. CXR is shown (Figure).",
     "media": [
       {

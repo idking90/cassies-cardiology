@@ -2,7 +2,6 @@
   "id": "wpw",
   "name": "WPW",
   "question": {
-    "sourceQuestionNumber": "17",
     "stem": "A 6-month-old boy is brought to the emergency department by his mother because he has had difficulty feeding and his heart has been racing for the past hour. His mother reports that earlier in the day, he was feeding well and appeared healthy; however, she became concerned when she noticed his heart was beating so fast that she could not count the rate. He has no history of illness, takes no medications, and is otherwise healthy, with normal growth and development.\n\nVital signs are T 37.1 °C (98.8 °F), BP 82/50 mm Hg, HR 240 bpm, and RR 60 breaths/min. On physical examination, the infant appears pale, mildly dyspneic, and fussy. An ECG shows a regular rhythm with a narrow QRS complex at 240 bpm.",
     "prompt": "Which of the following is the most appropriate treatment?"
   },

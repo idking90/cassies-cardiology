@@ -2,7 +2,6 @@
   "id": "pda",
   "name": "PDA",
   "question": {
-    "sourceQuestionNumber": "13",
     "stem": "A 1-month-old girl presents to the emergency department due to poor feeding. The patient lives in a rural area and was delivered by a midwife without prenatal care and has not yet been evaluated by a physician. The infant initially appeared well after birth, but over the past week she has not been feeding well, seems to get tired easily, and is short of breath during feeds. On physical examination, a grade 4 continuous murmur is heard in the left infraclavicular region. A CXR demonstrates cardiomegaly and increased pulmonary vascular markings.",
     "prompt": "Which of the following is the most likely additional finding?"
   },

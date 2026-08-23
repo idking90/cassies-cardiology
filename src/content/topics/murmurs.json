@@ -2,7 +2,6 @@
   "id": "murmurs",
   "name": "Murmurs",
   "question": {
-    "sourceQuestionNumber": "12",
     "stem": "During a scheduled health maintenance visit, a 4-year-old boy is noted to have a heart murmur. The child’s blood pressure is 80/55 mm Hg, and his heart rate is 76 bpm and regular. You recognize the murmur as benign and not indicative of a structural cardiac defect.",
     "prompt": "Which of the following best describes this type of heart murmur?"
   },

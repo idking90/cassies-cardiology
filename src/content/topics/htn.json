@@ -2,7 +2,6 @@
   "id": "htn",
   "name": "HTN",
   "question": {
-    "sourceQuestionNumber": "1",
     "stem": "A 17-year-old girl presents to her pediatrician in follow-up for hypertension. She has had persistent hypertension over the past few months, confirmed with ambulatory blood pressure monitoring. She has no other symptoms. Her mother has a history of hypertension. Today, her blood pressure is 138/88 mm Hg. Other vital signs are within normal limits. Her BMI is 23 kg/m2, and her physical examination is otherwise unremarkable. A comprehensive metabolic panel and urinalysis are normal.",
     "prompt": "Which test is most appropriate to add to the initial evaluation?"
   },

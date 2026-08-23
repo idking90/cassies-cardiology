@@ -2,7 +2,6 @@
   "id": "vsds",
   "name": "VSDs",
   "question": {
-    "sourceQuestionNumber": "11",
     "stem": "A 1-week-old boy is brought to the pediatrician for his routine weight check. He was born full term without complications and has been feeding and growing well. Vital signs are normal. On physical examination, cardiac auscultation reveals a grade 3/6 harsh holosystolic murmur that is loudest at the left mid to lower sternal border. The second heart sound is well split. ECG is normal.",
     "prompt": "Which of the following is the most likely form of this patient’s condition?"
   },

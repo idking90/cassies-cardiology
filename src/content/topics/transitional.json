@@ -2,7 +2,6 @@
   "id": "transitional",
   "name": "Transitional",
   "question": {
-    "sourceQuestionNumber": "6",
     "stem": "A 3-week-old girl is admitted to the hospital with a fever, poor feeding, and diarrhea. She was born at 39 weeks of gestation without complications. She has an elevated white blood cell count with cultures pending and is being treated with IV fluids and antibiotics. During the initial assessment, she was noted to be very tachycardic, and the resident physician ordered an ECG as a precaution. The ECG shows a regular rhythm, normal PR interval and QRS duration for age, and upright T waves in leads V1 and V3R.",
     "prompt": "Which of the following is the most likely significance of these ECG findings?"
   },

@@ -1,131 +1,94 @@
 # Architecture
 
-## Overview
+## Current V0 deployment
 
-Cassie's Cardiology is a serverless web application hosted on Cloudflare Pages.
+Cassie's Cardiology is a serverless application deployed on Cloudflare Pages at [https://cassiescardiology.com](https://cassiescardiology.com). The former `pages.dev` hostname redirects to the custom domain and is not canonical.
 
-The React frontend is served by Cloudflare Pages, and Pages Functions expose the
-quiz API backed by a Cloudflare D1 database. The browser uses the same API for
-educator session management and learner responses.
+The frontend uses React, TypeScript, and Vite. Cloudflare Pages Functions expose the API, and Cloudflare D1 stores live application state.
 
-The application has three access levels: public demo browsing, authenticated
-educator operations, and anonymous student participation. Cloudflare Access
-controls the educator allowlist, while Pages Functions validate the Access JWT
-and enforce ownership server-side.
+The application has three access modes:
 
-The application contains:
+- Public demo browsing, which does not create educator sessions or persist progress.
+- Educator operations authenticated with Google through Cloudflare Access.
+- Public, anonymous student participation.
 
-- Educator interface.
-- Learner question interface.
-- Local topic and teaching-content modules.
+Cloudflare Access protects `/api/educator/*`. Pages Functions validate the Access identity and enforce educator ownership. `/api/student/*` remains public; students do not authenticate and no student identity is stored.
 
-## Roles
+## Frontend and routing
 
-## Educator
+The browser uses History API routes:
 
-The educator can:
-- Sign in through Cloudflare Access.
-- View topics.
-- Select a topic.
-- View learner responses.
-- Mark topics complete.
-- Access teaching material, which also marks a topic complete.
-- Reset progress.
+- `/` — topic dashboard.
+- `/topics/:topicId` — educator question and live response view.
+- `/topics/:topicId/learn` — structured explanation and teaching content.
+- `/topics/:topicId/respond?session=<opaque-session-id>` — anonymous student response page.
 
-Educator completion is stored in D1 per educator and represents the educator's
-single current rotation. There is no historical rotation data.
+The dashboard contains 25 topics, including Genetics. It defaults to a 5-by-5 grid on desktop and one topic per row on normal mobile screens.
 
-## Learner
+## Roles and state
 
-Learners can:
-- Scan QR codes.
-- Open a separate learner-only question page.
-- Submit answers.
+### Educator
 
-Learner responses are submitted anonymously to the Pages Functions API and
-stored in D1. No learner identity or authentication data is collected.
+An authenticated educator can start or resume an educator-owned topic session, display its QR code, monitor aggregate responses, reveal the correct answer, view teaching content, mark topics complete, and reset the current rotation.
 
-Learners do not authenticate.
+Completion persists in D1 independently for each educator. V0 stores only the current rotation; it does not retain historical rotations.
 
-Unauthenticated visitors can browse the application and use its read-only demo
-mode. Demo actions do not create educator sessions or save educator progress.
+### Student
 
-## Application Flow
+A student follows a session-qualified QR link, selects an answer, and submits it anonymously. The student API returns session availability and reveal state. It does not return the correct answer until the educator reveals it.
 
-### Public Demo Flow
+### Public demo
 
-1. Open the dashboard without signing in.
-2. Browse topics, questions, and teaching content.
-3. See clearly labeled demo/read-only educator actions.
-4. Sign in as an educator to create live sessions or save progress.
+An unauthenticated visitor can browse topics and teaching content in read-only demo mode. Demo actions do not create quiz sessions or save progress.
 
-### Educator Flow
-
-1. Sign in through Cloudflare Access.
-2. Load the educator's current completed topics from D1.
-3. View the topic list.
-4. Select a topic tile.
-5. Create or load the educator-owned active quiz session through the educator API.
-6. Display a read-only question, a session-qualified QR code, and D1-backed response summary.
-7. Monitor aggregate responses returned by the educator API.
-8. Either:
-   - Mark topic complete and return to the dashboard.
-   - View teaching material, which marks the topic complete.
-9. Reveal the answer through the educator API when ready.
-10. Reset only this educator's current rotation when needed.
-
-Reset progress closes active quiz sessions through the existing server-side
-completion behavior. The next educator visit creates a fresh session.
-
-### Learner Flow
-
-1. Scan a QR code that links to `/topics/:topicId/respond?session=<opaque-session-id>`.
-2. Open the learner-only topic question.
-3. Select one answer.
-4. Submit it to the student API, which stores the response in D1.
-5. Poll the student API for the educator's reveal state. The correct answer is
-   not returned before the educator reveals it.
-
-## API Flow
+## API boundary
 
 Educator endpoints:
 
-- `GET /api/educator/me` validates the Cloudflare Access identity.
-- `GET /api/educator/progress` loads the authenticated educator's completed topics.
-- `POST /api/educator/progress/:topicId` saves one completed topic.
-- `POST /api/educator/progress/reset` clears the educator's current rotation and
-   closes that educator's active sessions.
-- `GET /api/educator/topics/:topicId` loads the authenticated educator's active
-   session summary.
-- `POST /api/educator/topics/:topicId` creates an active session owned by the
-   authenticated educator.
-- `POST /api/educator/topics/:topicId/reveal` reveals the answer and returns
-   the updated summary.
-- `POST /api/educator/topics/:topicId/complete` closes the authenticated
-   educator's active session.
+- `GET /api/educator/me`
+- `GET /api/educator/progress`
+- `POST /api/educator/progress/:topicId`
+- `POST /api/educator/progress/reset`
+- `GET|POST /api/educator/topics/:topicId`
+- `POST /api/educator/topics/:topicId/reveal`
+- `POST /api/educator/topics/:topicId/complete`
 
 Student endpoints:
 
-- `GET /api/student/topics/:topicId?session=<opaque-session-id>` returns session
-   availability and reveal state.
+- `GET /api/student/topics/:topicId?session=<opaque-session-id>`
 - `POST /api/student/topics/:topicId/responses?session=<opaque-session-id>`
-   records a learner choice in D1.
 
-## Initial Development Strategy
+The session API remains index-based: sessions store `choiceCount` and `correctAnswerIndex`, submissions use `choiceIndex`, and response summaries return index-aligned counts. The curriculum uses stable option IDs; the frontend converts between an option ID and its position without changing the API contract.
 
-Implemented:
-- React frontend.
-- Cloudflare Pages Functions API.
-- Cloudflare D1 database and migrations.
-- Shared frontend API client in `src/data/quizApi.ts`.
-- Cloudflare Access JWT validation for educator operations.
-- Per-educator current-rotation progress.
-- Educator-owned quiz sessions.
-- Public demo mode without localStorage persistence.
-- Anonymous student responses routed by opaque session token.
-- Local question/content files.
-- Browser History API for dashboard, educator topic, teaching, and learner routes.
-- Client-side QR generation from the learner response URL.
+## Curriculum architecture
 
-Future:
-- Cloudflare R2 image storage.
+Production topic JSON lives in `src/content/topics/`, and seven current media assets live in `public/media/topics/<topic-id>/`.
+
+Each topic supports:
+
+- ID, display name, and optional description.
+- Question stem, prompt, and optional question media.
+- Stable option IDs, ordered options, and `correctOptionId`.
+- Ordered `ContentBlock` explanations: paragraphs, bullet lists, numbered lists, tables, and positional media.
+- Optional per-option rationales, Testing Point, Bottom Line, and references.
+- Media alt text, optional caption, and optional source attribution.
+
+Question media is rendered between the stem and prompt. Explanation media remains at its exact `ContentBlock` position. These are distinct placements and are not interchangeable.
+
+Runtime content validation checks topic IDs, option IDs, answer references, blocks, tables, rationales, media metadata, and reference URLs. Before every build, `scripts/check-question-keys.mjs` verifies the server question-key manifest against all curriculum JSON files.
+
+## Curriculum import workflow
+
+The DOCX importer is `scripts/import-curriculum-preview.py`. A source DOCX belongs under the gitignored `import-source/` directory and must not be committed.
+
+The controlled workflow is:
+
+```text
+source DOCX -> import-preview -> human review -> production JSON/media
+```
+
+The importer extracts topic sections and media, preserves source wording, removes confirmed source-page navigation debris, and reports ambiguities or inconsistencies. It must not silently medically correct or reinterpret source material. Production promotion uses only reviewed preview artifacts.
+
+## V0 scope
+
+V0 focuses on live question delivery, anonymous response collection, educator reveal, and current-rotation progress. Gamification and bingo mechanics may be considered later but are not part of the current architecture.

@@ -2,7 +2,6 @@
   "id": "sports-physical",
   "name": "Sports Physical",
   "question": {
-    "sourceQuestionNumber": "48",
     "stem": "A 12-year-old boy presents to the clinic for a preparticipation sports exam. He is currently asymptomatic. His past history and family history are both unremarkable. His review of systems evaluation is noncontributory.",
     "prompt": "Which of the following findings on physical examination would be of greatest concern for a potential cardiac complication during his athletic participation?"
   },

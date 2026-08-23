@@ -2,7 +2,6 @@
   "id": "coarctation",
   "name": "Coarctation",
   "question": {
-    "sourceQuestionNumber": "14",
     "stem": "A 1-day-old boy in the newborn nursery is noted to have cyanosis of his legs, but his arms are pink and well-perfused. Pulse oximetry demonstrates an oxygen saturation of 96% in the right arm and 65% in the right leg. An echocardiogram reveals an area of narrowing within the lumen of the proximal descending thoracic aorta.",
     "prompt": "Which of the following is the most appropriate intervention at this time?"
   },
