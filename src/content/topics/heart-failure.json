@@ -1,0 +1,19 @@
+{
+  "id": "heart-failure",
+  "name": "Heart failure foundations",
+  "description": "Recognizing a heart failure presentation",
+  "question": { "stem": "Which element of this presentation would you explore next with the group?", "prompt": "Choose one answer." },
+  "options": [
+    { "id": "A", "text": "Symptoms" },
+    { "id": "B", "text": "Volume status" },
+    { "id": "C", "text": "Medication history" },
+    { "id": "D", "text": "Follow-up plan" }
+  ],
+  "correctOptionId": "A",
+  "explanation": [
+    { "type": "paragraph", "text": "A facilitator guide for discussing a heart failure presentation." },
+    { "type": "bullets", "items": ["Distinguish symptoms, signs, and supporting data.", "Discuss how volume status informs the next step.", "Ask learners to name a safe follow-up question."] },
+    { "type": "paragraph", "text": "Finish by asking learners to apply the framework to a new case." }
+  ],
+  "references": [{ "title": "Local teaching resource", "citation": "Local teaching resource" }]
+}

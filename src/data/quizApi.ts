@@ -47,7 +47,7 @@ export async function getEducatorIdentity() {
   }
 
   if (!response.ok) {
-    throw new ApiError('Unable to validate educator authentication.', response.status || 500)
+    throw new ApiError('You are not logged in and will be unable to run quizzes or save rotation progress.', response.status || 500)
   }
 
   const contentType = response.headers.get('content-type')

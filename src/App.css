@@ -18,3 +18,26 @@ h1, h2 { margin: 0; color: #182334; font-family: Georgia, 'Times New Roman', ser
 .student-page { display: grid; min-height: 100vh; place-items: center; padding: 1rem; background: #f4f6f8; }.student-question { width: min(100%, 42rem); }.student-page .question-panel { width: 100%; }.eyebrow { margin: 0 0 .4rem; color: #8c332f; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .submit-answer { width: 100%; margin-top: 1rem; }.submit-answer:disabled { cursor: not-allowed; opacity: .5; }.submission-status, .revealed-answer { margin: 1rem 0 0; padding: .8rem 1rem; border-radius: .6rem; color: #27664c; background: #e7f5ed; font-weight: 700; }.revealed-answer { color: #263448; background: #eef3f6; }.educator-revealed-answer { margin-bottom: 0; }
 @media (min-width: 48rem) { .app-shell { padding-top: 2rem; }.topic-layout { display: grid; grid-template-columns: minmax(0, 1fr) 18rem; align-items: start; }.qr-panel { position: sticky; top: 1rem; } }
+
+.question-stem { color: #334359; font-size: 1.05rem; }
+.question-stem > p:last-child { margin-bottom: 1.5rem; }
+.source-question-number { margin: 0 0 .5rem; color: #647286; font-size: .8rem; font-weight: 750; }
+.question-prompt { font-size: clamp(1.35rem, 3vw, 1.8rem); }
+.content-blocks { color: #43536a; line-height: 1.6; }
+.content-blocks > * { margin-block: 1rem; }
+.content-blocks ul, .content-blocks ol, .teaching-reference ul { display: grid; gap: .65rem; padding-left: 1.5rem; }
+.content-table-scroll { max-width: 100%; overflow-x: auto; }
+.content-table-scroll table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.content-table-scroll th, .content-table-scroll td { padding: .7rem .8rem; border: 1px solid #ccd6df; text-align: left; vertical-align: top; }
+.content-table-scroll th { color: #182334; background: #eef3f6; }
+.content-media { margin: 1.5rem 0; }
+.content-media img { display: block; width: auto; max-width: 100%; height: auto; margin: 0 auto; border-radius: .5rem; }
+.content-media figcaption { display: grid; gap: .25rem; margin-top: .55rem; color: #647286; font-size: .8rem; line-height: 1.4; }
+.content-media cite { font-style: normal; }
+.option-rationale { margin-top: 1.25rem; }
+.option-rationale h3 { color: #263448; font-size: 1rem; }
+.teaching-callout { margin-top: 2rem; padding: 1rem; border-left: .3rem solid #a53835; border-radius: .4rem; background: #fff7f5; }
+.teaching-callout h2 { font-size: 1.1rem; }
+.teaching-callout p { margin-bottom: 0; color: #59687a; }
+.bottom-line { border-left-color: #27664c; background: #e7f5ed; }
+.teaching-reference { font-style: normal; }

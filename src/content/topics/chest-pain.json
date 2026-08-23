@@ -1,0 +1,19 @@
+{
+  "id": "chest-pain",
+  "name": "Chest pain approach",
+  "description": "Structuring an initial assessment",
+  "question": { "stem": "What would be the most helpful next discussion point in this chest pain case?", "prompt": "Choose one answer." },
+  "options": [
+    { "id": "A", "text": "Symptom timeline" },
+    { "id": "B", "text": "Risk factors" },
+    { "id": "C", "text": "Initial testing" },
+    { "id": "D", "text": "Disposition planning" }
+  ],
+  "correctOptionId": "A",
+  "explanation": [
+    { "type": "paragraph", "text": "A facilitator guide for a structured discussion of an initial chest pain presentation." },
+    { "type": "bullets", "items": ["Begin with the highest-priority clinical concerns.", "Ask learners what additional context would change their thinking.", "Close by reviewing a simple, repeatable framework."] },
+    { "type": "paragraph", "text": "Use a brief think-pair-share before opening the discussion to the group." }
+  ],
+  "references": [{ "title": "Local teaching resource", "citation": "Local teaching resource" }]
+}
