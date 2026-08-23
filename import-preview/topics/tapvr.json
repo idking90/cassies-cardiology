@@ -1,0 +1,67 @@
+{
+  "id": "tapvr",
+  "name": "TAPVR",
+  "question": {
+    "sourceQuestionNumber": "5",
+    "stem": "A 12-hour-old, full-term boy is brought to the NICU with profound cyanosis and respiratory distress. Vital signs show HR 155 bpm, BP 50/30 mm Hg, RR 70 breaths/min, and oxygen saturation 55% despite administration of 100% oxygen. On physical examination, there is a prominent second heart sound. No distinct murmur is appreciated due to rapid heart and respiratory rates. The extremities are cool, peripheral pulses are weak, and the liver edge is palpable 4 cm below the costal margin. CXR reveals diffuse normal heart size and interstitial edema.",
+    "prompt": "Which of the following is the most likely diagnosis?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Respiratory distress syndrome"
+    },
+    {
+      "id": "B",
+      "text": "Large atrial septal defect"
+    },
+    {
+      "id": "C",
+      "text": "Truncus arteriosus with aberrant subclavian arteries"
+    },
+    {
+      "id": "D",
+      "text": "Pulmonary venous drainage into the right atrium"
+    },
+    {
+      "id": "E",
+      "text": "Pulmonary venous connection to the inferior vena cava"
+    }
+  ],
+  "correctOptionId": "E",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Pulmonary venous connection to the inferior vena cava"
+    },
+    {
+      "type": "paragraph",
+      "text": "This newborn’s profound cyanosis, respiratory distress/failure, and shock (ie, hypotension and poor perfusion, with cool extremities and weak pulses) along with a prominent second heart sound (S2) and hepatomegaly are consistent with an obstructed pulmonary venous connection to the inferior vena cava (IVC). This is an infracardiac form of total anomalous pulmonary venous connection (TAPVC; aka total anomalous pulmonary venous return; Figure). In this condition, the pulmonary veins drain into a common descending vertical vein (rather than the left atrium) that courses from the mediastinum through the diaphragm via the esophageal hiatus. From there, it usually joins the portal vein but sometimes joins the IVC, hepatic vein, or ductus venosus. Infracardiac TAPVC is the most likely form of this condition to become obstructed, usually at the diaphragm or liver. Obstruction leads to elevated pulmonary artery pressure, pulmonary edema, and reduced cardiac output. Physical findings result from left-to-right shunting and include cyanosis unresponsive to supplemental oxygen, tachypnea, hypotension, cool extremities, diminished pulses, and hepatomegaly from venous congestion, prominent S2, and occasionally a continuous murmur audible over the obstructed vertical vein. Echocardiography confirms the diagnosis in most cases."
+    },
+    {
+      "type": "media",
+      "media": {
+        "type": "diagram",
+        "src": "/import-preview/media/tapvr/tapvr-diagram-01.jpg",
+        "alt": "Heart diagram showing pulmonary veins connecting to a vertical vein, with the SVC, atrial septal defect, hepatic vein, and enlarged right ventricle labeled."
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Most newborns with an isolated large atrial septal defect (ASD) are asymptomatic initially. The left-to-right shunt is well tolerated in early life due to the high compliance of the right ventricle and low pulmonary vascular resistance. However, the chronic right-sided volume overload and large pulmonary blood flow eventually lead to pulmonary edema and heart failure. Untreated patients also are at risk for arrhythmia and pulmonary hypertension."
+    },
+    {
+      "type": "paragraph",
+      "text": "Respiratory distress syndrome (RDS) presents immediately after birth, rather than 12 hours later, and it is unlikely to occur in a term neonate. RDS is also expected to improve with respiratory support."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pulmonary venous drainage into the right atrium is a form of cardiac TAPVC. The other option in cardiac TAPVC is for the pulmonary veins to drain into the coronary sinus. Cardiac TAPVC is less likely to be obstructed than infracardiac TAPVC. Neonates with unobstructed TAPVC often have very mild cyanosis, though they are hypoxic. They eventually develop symptoms from overcirculation in the pulmonary system, such as tachypnea, poor feeding, and right ventricular hypertrophy."
+    },
+    {
+      "type": "paragraph",
+      "text": "Truncus arteriosus with aberrant subclavian arteries generally presents several days to weeks after birth, when pulmonary vascular resistance falls and pulmonary overcirculation leads to heart failure. Findings include a systolic ejection murmur, bounding pulses, wide pulse pressure, and later cyanosis. The early onset of shock and profound cyanosis in this case makes truncus arteriosus very unlikely."
+    }
+  ],
+  "testingPoint": "Recognize that infracardiac total anomalous pulmonary venous connection (TAPVC), such as a pulmonary venous connection to the inferior vena cava (IVC), is the most likely form of TAPVC to become obstructed. Neonates present shortly after birth with profound cyanosis, respiratory distress unresponsive to supplemental oxygen, shock, and hepatomegaly."
+}

@@ -1,0 +1,84 @@
+{
+  "id": "pulmonary-hypertension",
+  "name": "Pulmonary Hypertension",
+  "question": {
+    "stem": "A 4-month-old female infant is referred to pediatric cardiology for evaluation of tachypnea, poor weight gain, and recurrent respiratory infections. Chest X-ray shows a small right hemithorax with a curvilinear vascular shadow paralleling the right heart border descending toward the diaphragm, along with dextroposition of the cardiac silhouette. A CT angiogram confirms Scimitar syndrome, with anomalous drainage of the right pulmonary veins into the inferior vena cava, right lung hypoplasia, and an anomalous systemic arterial supply to the right lower lobe from the abdominal aorta. Echocardiography demonstrates elevated right ventricular systolic pressure consistent with pulmonary hypertension.",
+    "prompt": "Which of the following murmurs is most characteristically associated with pulmonary hypertension in this patient?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Continuous \"machinery\" murmur at the left infraclavicular area"
+    },
+    {
+      "id": "B",
+      "text": "Harsh holosystolic murmur at the left lower sternal border, increasing with inspiration"
+    },
+    {
+      "id": "C",
+      "text": "Single S2 with loud pulmonic component"
+    },
+    {
+      "id": "D",
+      "text": "Mid-diastolic rumble at the apex"
+    },
+    {
+      "id": "E",
+      "text": "Late systolic murmur with a mid-systolic click at the apex"
+    }
+  ],
+  "correctOptionId": "C",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Scimitar syndrome produces chronic left-to-right shunting (via partial anomalous pulmonary venous return) combined with pulmonary hypoplasia and anomalous systemic arterial supply, all of which contribute to elevated pulmonary artery pressures over time. As pulmonary hypertension develops and progresses, the pulmonary valve annulus dilates, leading to functional pulmonary regurgitation."
+    },
+    {
+      "type": "paragraph",
+      "text": "This produces the classic Graham Steell murmur: a high-pitched, early diastolic, decrescendo murmur best heard at the left upper sternal border (pulmonic area), reflecting regurgitant flow back across the pulmonary valve during diastole due to elevated pulmonary artery diastolic pressure. Like other right-sided murmurs, it characteristically increases in intensity with inspiration due to augmented venous return to the right heart."
+    },
+    {
+      "type": "paragraph",
+      "text": "Other associated exam findings of pulmonary hypertension include a loud, single, or narrowly split S2 (from forceful pulmonary valve closure) and, if right ventricular pressure becomes suprasystemic with resultant tricuspid regurgitation, a holosystolic murmur at the lower left sternal border may also be appreciated — but the murmur most specifically and classically linked to pulmonary hypertension itself is the diastolic Graham Steell murmur of pulmonary regurgitation."
+    }
+  ],
+  "optionRationales": [
+    {
+      "optionId": "A",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Continuous \"machinery\" murmur at the left infraclavicular area: Classic for patent ductus arteriosus, not pulmonary hypertension in isolation (though PDA can contribute to pulmonary overcirculation, this murmur pattern is not the characteristic finding of pulmonary hypertension itself)."
+        }
+      ]
+    },
+    {
+      "optionId": "B",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Harsh holosystolic murmur at the LLSB, increasing with inspiration: Describes tricuspid regurgitation, which can occur secondary to severe pulmonary hypertension/RV dilation but is a systolic, not diastolic, murmur — a distinct finding from the classic Graham Steell murmur being tested here."
+        }
+      ]
+    },
+    {
+      "optionId": "D",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Mid-diastolic rumble at the apex: Suggests mitral valve pathology (e.g., relative mitral stenosis from increased flow, as in a large VSD or PDA) — not a pulmonary hypertension–specific finding."
+        }
+      ]
+    },
+    {
+      "optionId": "E",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Late systolic murmur with mid-systolic click at the apex: Classic for mitral valve prolapse, unrelated to pulmonary hypertension."
+        }
+      ]
+    }
+  ],
+  "bottomLine": "Pulmonary hypertension causes pulmonary valve annular dilation and functional pulmonary regurgitation, producing the Graham Steell murmur — an early diastolic, decrescendo murmur at the LUSB that increases with inspiration — a classic, high-yield board association also worth remembering in the context of Scimitar syndrome."
+}

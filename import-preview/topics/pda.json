@@ -1,0 +1,68 @@
+{
+  "id": "pda",
+  "name": "PDA",
+  "question": {
+    "sourceQuestionNumber": "13",
+    "stem": "A 1-month-old girl presents to the emergency department due to poor feeding. The patient lives in a rural area and was delivered by a midwife without prenatal care and has not yet been evaluated by a physician. The infant initially appeared well after birth, but over the past week she has not been feeding well, seems to get tired easily, and is short of breath during feeds. On physical examination, a grade 4 continuous murmur is heard in the left infraclavicular region. A CXR demonstrates cardiomegaly and increased pulmonary vascular markings.",
+    "prompt": "Which of the following is the most likely additional finding?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Cyanosis"
+    },
+    {
+      "id": "B",
+      "text": "Single S2"
+    },
+    {
+      "id": "C",
+      "text": "Jugular venous distention"
+    },
+    {
+      "id": "D",
+      "text": "Ejection click"
+    },
+    {
+      "id": "E",
+      "text": "Bounding pulses"
+    }
+  ],
+  "correctOptionId": "E",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Bounding pulses"
+    },
+    {
+      "type": "paragraph",
+      "text": "This infant presents with symptoms of heart failure (poor feeding, respiratory distress) and a continuous murmur (often described as a “machinery” murmur), which are classic findings with a large patent ductus arteriosus (PDA). As pulmonary vascular resistance falls after birth, blood flows from the aorta through the PDA into the pulmonary artery (Figure), resulting in pulmonary overcirculation and progressive left-sided volume overload. The diastolic runoff from the aorta into the pulmonary circulation creates a wide pulse pressure and bounding pulses. Additional findings in large PDAs may include a hyperdynamic precordium, a third heart sound, or a diastolic rumble at the apex due to increased flow across the mitral valve. The CXR findings of cardiomegaly and increased pulmonary vascular markings reflect the increased pulmonary blood flow from the left-to-right shunt."
+    },
+    {
+      "type": "media",
+      "media": {
+        "type": "diagram",
+        "src": "/import-preview/media/pda/pda-diagram-01.jpg",
+        "alt": "Heart diagram showing a connection between the aorta and pulmonary artery with flow arrows.",
+        "source": "MedStudy illustration"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Cyanosis occurs with right-to-left shunts, which allow mixing of unoxygenated and oxygenated blood, whereas PDA results in a left-to-right shunt. However, in adults with uncorrected PDA, pulmonary hypertension sometimes develops, leading to shunt reversal (ie, Eisenmenger physiology). These patients develop cyanosis that is more pronounced in the lower extremities."
+    },
+    {
+      "type": "paragraph",
+      "text": "A single S2 occurs when the sound of aortic or pulmonic valve closure is diminished or absent, or when the aortic and pulmonic valves close simultaneously. In transposition of the great arteries, the anteriorly positioned aorta produces a single, loud S2; in truncus arteriosus, there is a single semilunar valve; in pulmonary atresia, only the aortic valve is present. However, in PDA, S2 sometimes is normal but may demonstrate splitting with an accentuated pulmonary component due to increased pulmonary blood flow."
+    },
+    {
+      "type": "paragraph",
+      "text": "An ejection click is caused by the sudden halting of semilunar valve opening or tensing of the valve apparatus during early systole, such as in aortic stenosis, pulmonic stenosis, or bicuspid aortic valve. PDA does not produce an ejection click because it is not a valvular structure."
+    },
+    {
+      "type": "paragraph",
+      "text": "Jugular venous distention (JVD) occurs with right heart failure, whereas PDA causes volume overload to the left heart. Congenital heart defects that increase right atrial pressure and cause JVD include Ebstein anomaly and anomalous pulmonary venous connections. In addition, severe pulmonary hypertension from long-standing left-to-right shunts (PDA, atrial and ventricular septal defects) eventually causes shunt reversal (ie, Eisenmenger physiology) and right heart failure."
+    }
+  ],
+  "testingPoint": "Understand that patients with a large PDA have a wide pulse pressure with bounding pulses due to diastolic runoff from the aorta into the pulmonary circulation."
+}

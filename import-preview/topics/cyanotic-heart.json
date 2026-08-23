@@ -1,0 +1,75 @@
+{
+  "id": "cyanotic-heart",
+  "name": "Cyanotic Heart",
+  "question": {
+    "sourceQuestionNumber": "60",
+    "stem": "A 5-day-old girl presents to the emergency department for evaluation of persistent cyanosis, which does not worsen during crying or feeding. She was seen by her pediatrician earlier today for a checkup, where mild cyanosis was noted and her oxygen saturation was 86%. Vital signs show T 36.9 °C (98.4 °F), HR 150 bpm, BP 80/45 mm Hg, RR 72 breaths/min, and oxygen saturation 85%, with no improvement after administration of supplemental oxygen. On physical examination, there are no retractions, grunting, or nasal flaring. Cardiac auscultation reveals a single loud S2 and no murmur. An ECG is normal. CXR is shown (Figure).",
+    "media": [
+      {
+        "type": "xray",
+        "src": "/import-preview/media/cyanotic-heart/cyanotic-heart-xray-01.png",
+        "alt": "Chest radiograph of an infant."
+      }
+    ],
+    "prompt": "Which of the following is the most likely diagnosis?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Transposition of the great arteries"
+    },
+    {
+      "id": "B",
+      "text": "Tetralogy of Fallot"
+    },
+    {
+      "id": "C",
+      "text": "Truncus arteriosus"
+    },
+    {
+      "id": "D",
+      "text": "Tricuspid atresia"
+    },
+    {
+      "id": "E",
+      "text": "Total anomalous pulmonary venous connection"
+    }
+  ],
+  "correctOptionId": "A",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Transposition of the great arteries"
+    },
+    {
+      "type": "paragraph",
+      "text": "The presence of central cyanosis in the first days of life, oxygen saturation that does not improve with supplemental oxygen, minimal respiratory distress, and CXR showing an “egg on a string” suggest a diagnosis of transposition of the great arteries (TGA). In TGA, the aorta arises from the right ventricle, and the pulmonary artery arises from the left ventricle (Figure). This condition requires a mixing lesion to be compatible with life, otherwise oxygenated blood will continue to recirculate through the lungs and will never reach the systemic circulation. The site of mixing can be either intracardiac (via ventricular or atrial septal defect [VSD or ASD] or patent foramen ovale [PFO]) or extracardiac (via patent ductus arteriosus or collateral vessels). In this patient, the absence of a murmur suggests that the interventricular septum is intact (otherwise there would be a holosystolic murmur from a VSD), so there must be mixing at the atrial level (the ductus arteriosus would be closed by now). The lack of improvement with supplemental oxygen is a classic finding in TGA and results from having parallel circulations with inadequate mixing. The single loud S2 results from anterior positioning of the aorta. Note that the “egg on a string” appearance on CXR results from the abnormal positioning of the great arteries, creating a narrow pedicle."
+    },
+    {
+      "type": "media",
+      "media": {
+        "type": "diagram",
+        "src": "/import-preview/media/cyanotic-heart/cyanotic-heart-diagram-02.jpg",
+        "alt": "Side-by-side heart diagrams labeled Normal and D-transposition of the great arteries.",
+        "source": "MedStudy archives"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Tetralogy of Fallot (TOF) typically presents with a harsh systolic ejection murmur due to right ventricular outflow tract obstruction. Cyanosis may be present but often is relatively mild initially, and patients often have hypercyanotic “tet spells” triggered by agitation or feeding. In this patient, the cyanosis does not worsen with crying or feeding. In addition, the characteristic CXR finding in TOF is a \"boot-shaped\" heart, due to an upturned right ventricular apex with a concave main pulmonary artery segment."
+    },
+    {
+      "type": "paragraph",
+      "text": "In truncus arteriosus, there is a single arterial trunk supplying both the systemic and pulmonary circulations. Patients usually have a loud systolic ejection murmur due to increased pulmonary blood flow. Patients often present with heart failure symptoms (eg, tachypnea, poor feeding) rather than isolated cyanosis without respiratory distress. The CXR shows cardiomegaly, increased pulmonary markings, and often a right aortic arch."
+    },
+    {
+      "type": "paragraph",
+      "text": "In tricuspid atresia, the tricuspid valve is absent, leading to a hypoplastic right ventricle and decreased pulmonary blood flow. Patients typically have a heart murmur due to additional defects (eg, holosystolic murmur with a VSD) and sometimes show signs of heart failure or increased pulmonary blood flow depending on the abnormalities. Also, ECG would show left axis deviation and left ventricular hypertrophy."
+    },
+    {
+      "type": "paragraph",
+      "text": "In total anomalous pulmonary venous connection (TAPVC), the pulmonary veins drain into the systemic venous circulation instead of into the left atrium. Patients often present with significant respiratory distress and signs of pulmonary congestion, especially if there is obstruction. The absence of respiratory distress and normal work of breathing in this patient make this diagnosis less likely. Also, CXR often shows a widened rather than narrow mediastinum."
+    }
+  ],
+  "testingPoint": "Recognize the clinical presentation of transposition of the great arteries (TGA), with mild cyanosis in the presence of a mixing lesion, lack of improvement with supplemental oxygen, and an “egg on a string” on CXR. If the mixing occurs at the atrial level (ie, the interventricular septum is intact), there usually is no murmur on exam."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "asd",
+  "name": "ASD",
+  "question": {
+    "sourceQuestionNumber": "19",
+    "stem": "A 17-year-old girl presents to clinic with a history of decreased exercise tolerance over the past several months. She is especially concerned because she has always been an outstanding athlete. She has no known history of any chronic medical problems and takes no daily medications. On physical examination, there is a soft systolic ejection murmur over the upper left sternal border, without an ejection click. S1 is normal, and S2 is widely split and does not vary with the respiratory cycle.",
+    "prompt": "Which of the following is the most likely finding on ECG?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Tall R waves in leads V5 and V6"
+    },
+    {
+      "id": "B",
+      "text": "rSR′ pattern in lead V1"
+    },
+    {
+      "id": "C",
+      "text": "Low-voltage QRS complexes"
+    },
+    {
+      "id": "D",
+      "text": "Generalized ST segment elevation"
+    },
+    {
+      "id": "E",
+      "text": "Dissociation of P waves and QRS complexes"
+    }
+  ],
+  "correctOptionId": "B",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "rSR′ pattern in lead V1"
+    },
+    {
+      "type": "paragraph",
+      "text": "This patient’s systolic ejection murmur (due to increased blood flow across the pulmonic valve from the left-to-right shunt) and fixed splitting of S2 are typical of an atrial septal defect (ASD). The defect most likely is moderate or large in size, given that it has persisted to adolescence, whereas smaller ASDs are very likely to close spontaneously. When a significant amount of shunting is present, ECG findings include a slightly prolonged QRS complex and an rSr’ or rSR’ pattern in lead V1 (Figure). This sometimes is referred to as “incomplete bundle-branch block” and is thought to be due to enlargement of the right ventricular outflow tract (RVOT; the last part of the ventricle to depolarize), or to distention of the RVOT (leading to stretching of the conduction fibers). Other ECG findings in moderate or large secundum ASDs (the most common type of ASD) include prolonged PR interval, right axis deviation, and crochetage (ie, notching of the peak of the R wave in the inferior leads)."
+    },
+    {
+      "type": "media",
+      "media": {
+        "type": "ecg",
+        "src": "/import-preview/media/asd/asd-ecg-01.jpg",
+        "alt": "12-lead ECG tracing with an arrow marking the waveform in lead V1.",
+        "source": "MedStudy illustration"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Tall R waves in leads V5 and V6 indicate left ventricular hypertrophy. In contrast, a large ASD causes volume overload to the right side of the heart. This leads to right ventricular enlargement, with right axis deviation on ECG."
+    },
+    {
+      "type": "paragraph",
+      "text": "Low-voltage QRS complexes have a variety of causes, which do not include ASD. Common causes of this finding on ECG include obesity, large or bilateral pleural effusions, pneumothorax, pericardial effusion, and cardiomyopathies."
+    },
+    {
+      "type": "paragraph",
+      "text": "Dissociation of P waves and QRS complexes occurs in 3rd degree atrioventricular block (aka complete heart block). This is a possible cause of right or left ventricular outflow tract murmurs, due to the slower ventricular rate and subsequent large stroke volume. However, this arrhythmia does not cause wide, fixed splitting of S2, so this finding is not expected in this patient."
+    },
+    {
+      "type": "paragraph",
+      "text": "Generalized ST segment elevation is not an expected finding in ASD; it most commonly occurs in acute pericarditis and often in acute myocarditis. In these settings it indicates widespread cardiac inflammation."
+    }
+  ],
+  "testingPoint": "Recognize characteristic ECG changes that occur with a clinically significant atrial septal defect (ASD), including an rSr’ or rSR’ pattern in lead V1. Additional findings sometimes include a prolonged PR interval, right axis deviation, and crochetage."
+}

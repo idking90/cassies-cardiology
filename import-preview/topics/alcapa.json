@@ -1,0 +1,69 @@
+{
+  "id": "alcapa",
+  "name": "ALCAPA",
+  "question": {
+    "stem": "A patient is brought to the pediatrician by her mother, who reports that she becomes fussy, diaphoretic, and seems to \"cry out in pain\" during feeds, and tires before finishing a bottle. The mother also notes the child seems more comfortable when sleeping in a semi-upright position. On exam, the patient is tachypneic with a gallop rhythm and hepatomegaly. An EKG shows deep Q waves and ST-segment changes in the lateral leads, and an echocardiogram confirms the diagnosis of anomalous origin of the left coronary artery from the pulmonary artery (ALCAPA).",
+    "prompt": "At what age do infants with ALCAPA most commonly become symptomatic?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Immediately at birth"
+    },
+    {
+      "id": "B",
+      "text": "2–4 months of age"
+    },
+    {
+      "id": "C",
+      "text": "6–12 months of age"
+    },
+    {
+      "id": "D",
+      "text": "2–3 years of age"
+    },
+    {
+      "id": "E",
+      "text": "Adolescence"
+    }
+  ],
+  "correctOptionId": "B",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "In ALCAPA, the left coronary artery arises anomalously from the pulmonary artery instead of the aorta. In utero and immediately after birth, pulmonary artery pressure (and thus pulmonary artery oxygen saturation) is high enough to adequately perfuse the myocardium, so infants are typically asymptomatic at birth."
+    },
+    {
+      "type": "paragraph",
+      "text": "As pulmonary vascular resistance physiologically declines over the first weeks of life (reaching near-adult levels by ~6–8 weeks), pressure and oxygen saturation in the pulmonary artery fall. This causes progressively inadequate, desaturated perfusion of the left ventricular myocardium, leading to myocardial ischemia and infarction — most classically manifesting between 2 and 4 months of age."
+    },
+    {
+      "type": "paragraph",
+      "text": "Clinically, this presents as an \"anginal equivalent\" in infants: episodes of irritability, diaphoresis, and pain with feeding (feeding is the infant's exertional stress test), along with signs of left ventricular dysfunction/CHF (tachypnea, poor weight gain, hepatomegaly, gallop rhythm) from the resulting dilated cardiomyopathy. Mitral regurgitation from papillary muscle ischemia is also common."
+    },
+    {
+      "type": "bullets",
+      "items": [
+        "EKG: deep Q waves and ST changes in lead I, aVL, and the lateral precordial leads (V5–V6) — a pattern of anterolateral MI in an infant is essentially pathognomonic for ALCAPA.",
+        "CXR: cardiomegaly.",
+        "Echo/cardiac catheterization/CT angiography confirms coronary origin."
+      ]
+    }
+  ],
+  "optionRationales": [
+    {
+      "optionId": "A",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "(at birth): Infants are usually asymptomatic at birth due to persistently elevated PVR/PA saturation."
+        },
+        {
+          "type": "paragraph",
+          "text": "C, D, E: A minority of patients (those who develop robust collateral circulation between the right and left coronary systems) survive infancy without diagnosis and present later — this is the less common \"adult type\" ALCAPA, presenting with exertional symptoms, mitral regurgitation, or sudden cardiac death, but this is not the typical/classic presentation tested on boards."
+        }
+      ]
+    }
+  ],
+  "bottomLine": "ALCAPA classically presents at 2–4 months of life with an MI-like picture precipitated by the normal postnatal drop in pulmonary vascular resistance."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "infectious-disease",
+  "name": "Infectious Disease",
+  "question": {
+    "sourceQuestionNumber": "8",
+    "stem": "An 18-year-old woman presents to the emergency department with a 3-day history of chest pain. The pain is constant, intense, and located in the mid-precordial area. It is relieved somewhat by leaning forward. Results of an ECG are shown (Figure):",
+    "media": [
+      {
+        "type": "ecg",
+        "src": "/import-preview/media/infectious-disease/infectious-disease-ecg-01.png",
+        "alt": "ECG tracing with standard and right-sided precordial leads, including V3R and V4R."
+      }
+    ],
+    "prompt": "Which of the following is most appropriate to include in the initial treatment of this patient’s condition?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Rilonacept"
+    },
+    {
+      "id": "B",
+      "text": "IVIG"
+    },
+    {
+      "id": "C",
+      "text": "Atenolol"
+    },
+    {
+      "id": "D",
+      "text": "Prednisone"
+    },
+    {
+      "id": "E",
+      "text": "Aspirin"
+    }
+  ],
+  "correctOptionId": "E",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Aspirin"
+    },
+    {
+      "type": "paragraph",
+      "text": "The characteristics of this patient’s chest pain and the diffuse ST elevations in leads I, II, and AVF and in V3-V6 on the ECG are consistent with a diagnosis of acute pericarditis. Initial treatment is with a high-dose NSAID, typically either aspirin 650-1,000 mg three times daily, or ibuprofen 600-800 mg three times daily. Aspirin is not recommended for children < 12 years of age due to the risk for Reye syndrome, especially given that acute pericarditis often occurs during a viral infection. Therefore, in younger patients, ibuprofen is preferred. The NSAID is given in combination with colchicine, which further reduces symptoms and also reduces the risk for recurrence more than use of NSAIDs alone. However, note that this use of colchicine is not FDA-approved for acute pericarditis but is considered standard of care. As symptoms resolve, the NSAID is tapered weekly, but the colchicine is continued for at least 3 months."
+    },
+    {
+      "type": "paragraph",
+      "text": "Although this patient is tachycardic, with HR of about 140 bpm, use of a beta-blocker such as atenolol is not the first-line treatment. A low dose sometimes is appropriate in patients with tachycardia, no evidence of cardiac tamponade, and persistent symptoms despite use of an NSAID and colchicine."
+    },
+    {
+      "type": "paragraph",
+      "text": "Due to their potential adverse effects and less robust evidence for efficacy, glucocorticoids such as prednisone are a second-line treatment for acute pericarditis. These anti-inflammatory drugs are appropriate when NSAIDs are contraindicated or when there is insufficient improvement with NSAIDs and colchicine."
+    },
+    {
+      "type": "paragraph",
+      "text": "IVIG is not an effective treatment for acute pericarditis. High-dose IVIG is used as an anti-inflammatory agent in other conditions, such as Kawasaki disease and immune thrombocytopenia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Rilonacept is an interleukin-1 inhibitor approved for the treatment of recurrent pericarditis and reduction in the risk of recurrence in patients ≥ 12 years of age. It is not a first-line treatment for the initial presentation of acute pericarditis."
+    }
+  ],
+  "testingPoint": "Know that the first-line treatment of acute pericarditis is with a high-dose NSAID, usually either aspirin or ibuprofen, in combination with colchicine. Ibuprofen is preferred in children < 12 years of age due to the risk of Reye syndrome with aspirin."
+}

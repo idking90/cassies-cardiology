@@ -1,0 +1,59 @@
+{
+  "id": "vsds",
+  "name": "VSDs",
+  "question": {
+    "sourceQuestionNumber": "11",
+    "stem": "A 1-week-old boy is brought to the pediatrician for his routine weight check. He was born full term without complications and has been feeding and growing well. Vital signs are normal. On physical examination, cardiac auscultation reveals a grade 3/6 harsh holosystolic murmur that is loudest at the left mid to lower sternal border. The second heart sound is well split. ECG is normal.",
+    "prompt": "Which of the following is the most likely form of this patient’s condition?"
+  },
+  "options": [
+    {
+      "id": "A",
+      "text": "Malalignment"
+    },
+    {
+      "id": "B",
+      "text": "Subpulmonic"
+    },
+    {
+      "id": "C",
+      "text": "Perimembranous"
+    },
+    {
+      "id": "D",
+      "text": "Muscular"
+    },
+    {
+      "id": "E",
+      "text": "Inlet"
+    }
+  ],
+  "correctOptionId": "C",
+  "explanation": [
+    {
+      "type": "paragraph",
+      "text": "Perimembranous"
+    },
+    {
+      "type": "paragraph",
+      "text": "A grade 3/6 harsh holosystolic murmur loudest at the left mid to lower sternal border, a well-split second heart sound (suggesting that pulmonary vascular resistance [PVR] is not markedly increased), and a normal ECG in an otherwise asymptomatic 1-week-old are classic findings of a small ventricular septal defect (VSD). The murmur usually becomes audible at 4-10 days of life, as PVR falls, allowing left-to-right shunting across the VSD. The most common type of VSD is perimembranous (aka membranous), accounting for ~ 80% of all VSDs. These defects are located beneath the aortic valve, behind the septal leaflet of the tricuspid valve. Perimembranous VSDs often close spontaneously; eg, if the septal leaflet of the tricuspid valve forms a pouch that reduces shunting."
+    },
+    {
+      "type": "paragraph",
+      "text": "Muscular VSDs are much less common than perimembranous VSDs, accounting for up to 20% of all VSDs. They are located in the muscular interventricular septum and often close spontaneously, especially those located in the central muscular septum. Sometimes there are multiple defects, creating a “Swiss cheese” appearance. Small defects are common in very premature infants."
+    },
+    {
+      "type": "paragraph",
+      "text": "Subpulmonic (aka infundibular, supracristal, outlet) VSDs account for ~ 5% of cases in North America and Western Europe but ~ 30% of cases in Asian populations. These VSDs are located immediately beneath the pulmonary and aortic valves. Aortic valve prolapse and regurgitation often develop. Spontaneous closure is rare."
+    },
+    {
+      "type": "paragraph",
+      "text": "Inlet (aka atrioventricular canal) VSDs account for ~ 8% of all VSDs and are more common in patients with trisomy 21. They are located just below the tricuspid and mitral valves, within the inlet portion of the right ventricular septum. They usually occur with an atrial septal defect that is part of a complete atrioventricular canal defect (aka endocardial cushion defect). They do not close spontaneously."
+    },
+    {
+      "type": "paragraph",
+      "text": "Malalignment VSDs result from displacement of the conal septum anteriorly or posteriorly. Anterior malalignment occurs in tetralogy of Fallot, while posterior alignment causes left ventricular outflow tract obstruction. These defects do not typically occur in otherwise healthy infants."
+    }
+  ],
+  "testingPoint": "Recognize that the most common type of ventricular septal defect (VSD) is perimembranous, accounting for 80% of all VSDs. These defects are located beneath the aortic valve, behind the septal leaflet of the tricuspid valve."
+}
